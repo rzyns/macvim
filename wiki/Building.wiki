@@ -1,0 +1,23 @@
+#summary How to build MacVim
+
+*These are preliminary instructions, I will add all the files and populate the repository soon.*
+
+Make sure you have the vim source code downloaded (you won't need the source at the moment, only the runtime files).  Start Terminal and `cd` to the `src` directory of vim, e.g.
+{{{
+localhost~ user$ cd vim71/src
+}}}
+
+Check out source
+{{{
+localhost~/vim71/src user$ svn co http://macvim.googlecode.com/svn/trunk MacVim
+}}}
+
+At the moment it only works to build the GUI, so download the latest snapshot in the 'Downloads' tab to the Desktop, unzip it, and type
+{{{
+localhost~/vim71/src user$ cp ~/Desktop/MacVim.app/Contents/MacOS/Vim .
+}}}
+The xcode project file expects the Vim executable to be there.  As soon as I figure out how to, I will put up a patch file so that you can patch the Vim source and build the Vim executable yourself.
+
+Open `MacVim.xcodeproj` (which is inside the `MacVim` folder), and click the 'Build' button (Cmd+B).  This will build the application bundle `MacVim.app` inside the `build/Release` (or `build/Debug`, depending on which build configuration is active).
+
+
