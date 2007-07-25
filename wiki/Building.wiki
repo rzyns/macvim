@@ -11,7 +11,7 @@ Check out the MacVim source
 localhost~/vim71/src user$ svn co http://macvim.googlecode.com/svn/trunk MacVim
 }}}
 
-At the moment it only works to build the GUI, so download the latest snapshot in the 'Downloads' tab to the Desktop, unzip it, and type
+At the moment it only works to build the GUI, so download the latest snapshot in the 'Downloads' tab to the Desktop, unzip it and move MacVim.app to the desktop, then type
 {{{
 localhost~/vim71/src user$ cp ~/Desktop/MacVim.app/Contents/MacOS/Vim .
 }}}
