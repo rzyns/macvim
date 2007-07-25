@@ -3,19 +3,19 @@
 
 First you need to get the Vim source code.  In order to do this, start Terminal and type
 {{{
-localhost~ user$ svn co https://vim.svn.sourceforge.net/svnroot/vim/vim7
+localhost:~ user$ svn co https://vim.svn.sourceforge.net/svnroot/vim/vim7
 }}}
 This will create the folder vim7 and populate it with the Vim source (be patient, it can take a while).
 
 The next thing is to download the MacVim source and put it in the `vim7/src` folder as follows:
 {{{
-localhost~ user$ cd vim7/src
-localhost~/vim7/src user$ svn co http://macvim.googlecode.com/svn/trunk/ MacVim
+localhost:~ user$ cd vim7/src
+localhost:~/vim7/src user$ svn co http://macvim.googlecode.com/svn/trunk/ MacVim
 }}}
 
 At the moment it only works to build the GUI, so download the latest snapshot in the 'Downloads' tab, unzip it and move MacVim.app to the desktop, then type
 {{{
-localhost~/vim7/src user$ cp ~/Desktop/MacVim.app/Contents/MacOS/Vim .
+localhost:~/vim7/src user$ cp ~/Desktop/MacVim.app/Contents/MacOS/Vim .
 }}}
 The Xcode project file expects the Vim executable to be there.  As soon as I figure out how to, I will put up a patch file so that you can patch the Vim source and build the Vim executable yourself.
 
@@ -23,7 +23,6 @@ Open `MacVim.xcodeproj` (which is inside the `MacVim` folder), and click the 'Bu
 
 
 The project is set up to build a universal binary, this can be changed in the build settings. Also, once you've built the project once you might want to check the option 'Run script only when installing' inside the info window of 'Targets -> MacVim -> Run Script'. Doing this means that the Vim runtime files won't be copied every time you build or run the project (it can take some time).
-
 
 
 
