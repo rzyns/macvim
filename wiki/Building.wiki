@@ -1,7 +1,7 @@
 #summary How to build MacVim
 #labels Featured,Phase-Implementation
 
-Make sure you have the vim source code downloaded (you won't need the source at the moment, only the runtime files).  Start Terminal and `cd` to the `src` directory of vim, e.g.
+Make sure you have the Vim source code downloaded (you won't need the source at the moment, only the runtime files).  Start Terminal and `cd` to the `src` directory of Vim, e.g.
 {{{
 localhost~ user$ cd vim71/src
 }}}
