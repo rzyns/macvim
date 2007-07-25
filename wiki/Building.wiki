@@ -18,6 +18,5 @@ localhost~/vim71/src user$ cp ~/Desktop/MacVim.app/Contents/MacOS/Vim .
 }}}
 The xcode project file expects the Vim executable to be there.  As soon as I figure out how to, I will put up a patch file so that you can patch the Vim source and build the Vim executable yourself.
 
-Open `MacVim.xcodeproj` (which is inside the `MacVim` folder), and click the 'Build' button (Cmd+B).  This will build the application bundle `MacVim.app` inside the `build/Release` (or `build/Debug`, depending on which build configuration is active).
-
+Open `MacVim.xcodeproj` (which is inside the `MacVim` folder), and click the 'Build' button (Cmd+B).  This will build the application bundle `MacVim.app` inside `build/Release` (or `build/Debug`, depending on which build configuration is active).
 
