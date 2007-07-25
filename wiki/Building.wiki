@@ -3,7 +3,7 @@
 
 Here is the summary on what you need to do:
   * Get the vim7 source
-  * Check out the MacVim source from the Google code repository and put it inside `vim7/src/MacVim`
+  * Check out the !MacVim source from the Google code repository and put it inside `vim7/src/MacVim`
   * Download `macvim.diff`, `gui_macvim.pro` from the 'Downloads' tab.  Apply the patch to the vim7 source code and put `gui_macvim.pro` inside `vim7/src/proto`
   * `make` Vim
   * Open `MacVim/MacVim.xcodeproj` and build it
@@ -26,7 +26,7 @@ localhost:~ user$ cp ~/Desktop/gui_macvim.pro proto/
 localhost:~ user$ patch -p0 -i macvim.diff
 }}}
 
-The next thing is to download the MacVim source and put it in the `vim7/src` folder as follows:
+The next thing is to download the !MacVim source and put it in the `vim7/src` folder as follows:
 {{{
 localhost:~/vim7/src user$ svn co http://macvim.googlecode.com/svn/trunk/ MacVim
 }}}
@@ -37,13 +37,13 @@ localhost:~ user$ autoconf
 localhost:~ user$ ./configure --enable-gui=macvim
 localhost:~ user$ make
 }}}
-This should produce an executable named `Vim` in the `vim7/src` folder. You can run it in terminal mode (no `-g` switch) and type `:ver` to confirm that it includes the MacVim GUI code (although we are _not_ done yet).
+This should produce an executable named `Vim` in the `vim7/src` folder. You can run it in terminal mode (no `-g` switch) and type `:ver` to confirm that it includes the !MacVim GUI code (although we are _not_ done yet).
 
 Finally, open `MacVim.xcodeproj` (which is inside the `MacVim` folder), and click the 'Build' button (Cmd+B).  This will build the application bundle `MacVim.app` inside `build/Release` (or `build/Debug`, depending on which build configuration is active).
 
 That's it!
 
-Once you've built the project once you might want to check the option 'Run script only when installing' inside the info window of 'Targets -> MacVim -> Run Script'. Doing this means that the Vim runtime files won't be copied every time you build or run the project (it can take some time).
+Once you've built the project once you might want to check the option 'Run script only when installing' inside the info window of 'Targets -> !MacVim -> Run Script'. Doing this means that the Vim runtime files won't be copied every time you build or run the project (it can take some time).
 
 
 
