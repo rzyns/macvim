@@ -1,23 +1,31 @@
 #summary How to build MacVim
 #labels Featured,Phase-Implementation
 
-Make sure you have the Vim source code downloaded (you won't need the source at the moment, only the runtime files).  Start Terminal and `cd` to the `src` directory of Vim, e.g.
+First you need to get the Vim source code.  In order to do this, start Terminal and type
 {{{
-localhost~ user$ cd vim71/src
+localhost~ user$ svn co https://vim.svn.sourceforge.net/svnroot/vim/vim7
+}}}
+This will create the folder vim7 and populate it with the Vim source (be patient, it can take a while).
+
+The next thing is to download the MacVim source and put it in the `vim7/src` folder as follows:
+{{{
+localhost~ user$ cd vim7/src
+localhost~/vim7/src user$ svn co http://macvim.googlecode.com/svn/trunk MacVim
 }}}
 
-Check out the MacVim source
+At the moment it only works to build the GUI, so download the latest snapshot in the 'Downloads' tab, unzip it and move MacVim.app to the desktop, then type
 {{{
-localhost~/vim71/src user$ svn co http://macvim.googlecode.com/svn/trunk MacVim
+localhost~/vim7/src user$ cp ~/Desktop/MacVim.app/Contents/MacOS/Vim .
 }}}
-
-At the moment it only works to build the GUI, so download the latest snapshot in the 'Downloads' tab to the Desktop, unzip it and move MacVim.app to the desktop, then type
-{{{
-localhost~/vim71/src user$ cp ~/Desktop/MacVim.app/Contents/MacOS/Vim .
-}}}
-The xcode project file expects the Vim executable to be there.  As soon as I figure out how to, I will put up a patch file so that you can patch the Vim source and build the Vim executable yourself.
+The Xcode project file expects the Vim executable to be there.  As soon as I figure out how to, I will put up a patch file so that you can patch the Vim source and build the Vim executable yourself.
 
 Open `MacVim.xcodeproj` (which is inside the `MacVim` folder), and click the 'Build' button (Cmd+B).  This will build the application bundle `MacVim.app` inside `build/Release` (or `build/Debug`, depending on which build configuration is active).
 
 
-The project is set up to build a universal binary, this can be changed in the build settings. Also, once you've built the project once you might want to check the option 'Run script only when installing' inside the info window of 'Targets/MacVim/Run Script'. Doing this means that the Vim runtime files won't be copied every time you build or run the project (it can take some time).
+The project is set up to build a universal binary, this can be changed in the build settings. Also, once you've built the project once you might want to check the option 'Run script only when installing' inside the info window of 'Targets -> MacVim -> Run Script'. Doing this means that the Vim runtime files won't be copied every time you build or run the project (it can take some time).
+
+
+
+
+
+
