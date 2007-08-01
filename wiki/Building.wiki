@@ -6,7 +6,7 @@
 Here is the summary on what you need to do:
   * Get the vim7 source
   * Check out the !MacVim source from the Google code repository and put it inside `vim7/src/MacVim`
-  * Download `macvim.diff`, `gui_macvim.pro` from the 'Downloads' tab.  Apply the patch to the vim7 source code and put `gui_macvim.pro` inside `vim7/src/proto`
+  * Download the latest patch archive `patch-r*.tar.gz` from the 'Downloads' tab.  This archive contains `macvim.diff`, `gui_macvim.pro`.  Apply the patch to the vim7 source code and put `gui_macvim.pro` inside `vim7/src/proto`
   * Build Vim with `configure --enable-gui=macvim` and then `make`
   * Open `MacVim/MacVim.xcodeproj` and build it
 
@@ -15,7 +15,7 @@ If those instructions were not enough, then read on...
 
 ===The long version===
 
-First download `macvim.diff` and `gui_macvim.pro` to the Desktop (you can put them wherever, but in what follows I will assume you put them there) from the 'Downloads' tab.
+First download the latest patch archive `patch-r*.tar.gz` from the `Downloads` tab.  Unarchive the files `macvim.diff` and `gui_macvim.h` to the Desktop (you can put them wherever, but in what follows I will assume you put them there).
 
 Next, you need to get the Vim source code.  In order to do this, start Terminal and type
 {{{
