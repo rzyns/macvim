@@ -1,0 +1,34 @@
+#summary Overview of the MacVim source code
+
+Here is a short overview of the MacVim source code. _Note that the information in here is not intended to be exhaustive and it might not be completely up to date_.
+
+!MacVim consists of two major parts: !MacVim.app and Vim.  Vim is the actual text editor and contains no GUI related code. !MacVim.app is the GUI which coordinates one or more Vim processes at the same time. Code shared between !MacVim and Vim goes in `MacVim.[h|m]`.
+
+*Vim*:
+  * Vim calls `gui_mch_*` etc. are in `gui_macvim.m`, these mostly passes calls on to `MMBackend`.
+  * `MMBackend`: singleton, acts as proxy for the frontend (`MMVimController`), implements `MMBackendProtocol`
+
+*MacVim*:
+  * `MMAppController`: singleton, delegate of `NSApp`, manages the app, listens for incoming connections from Vim on a named connection, the `MMAppController` object is vended by this connection, maintains list of `MMVimControllers`, implements `MMAppProtocol`
+  * `MMVimController`: manages one Vim process, handles everything not directly relating to views, manages main menu, owns `MMWindowController`, should in theory be able to run without a window, acts as proxy object for the backend (`MMBackend`), implements `MMFrontendProtocol`
+  * `MMWindowController`: derives from `NSWindowController`, handles everything view related, loads `VimWindow.nib`, owns `MMTextStorage`/`MMTextView`
+  * `VimWindow.nib`: all views, except for the text view, are connected in the nib
+  * `MainMenu.nib`: instantiates `MMAppController` and makes it the delegate of `NSApp`, the menus in this nib are ignored, menus are set up in `$VIM/gvimrc` and in `$VIMRUNTIME/menu.vim`
+
+
+!MacVim and Vim communicate via distributed objects. The protocols used can be found in `MacVim.h`.  Here are some points to note (in no particular order):
+  * Messages are queued and should not be sent whilst processing a DO message.
+  * Input from !MacVim to Vim that change state should go through `processInput:data:` in `MMBackendProtocol`.
+  * State query messages can be sent synchronously, just add the appropriate message in `MMBackendProtocol`.
+  * Output from Vim to !MacVim arrives in `processCommandQueue:` in `MMFrontendProtocol`.
+  * Take care not to call `processInput:data:` too often or the app might stall.  If a message may be sent very rapidly, then the `wait` flag in `MMVimController` `sendMessage:data:wait:` should be set to `NO`.
+
+
+
+
+
+
+
+
+
+
