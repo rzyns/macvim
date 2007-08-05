@@ -8,7 +8,7 @@ Here is a short overview of the MacVim source code. _Note that the information i
   * Vim calls `gui_mch_*` etc. are in `gui_macvim.m`, these mostly passes calls on to `MMBackend`.
   * `MMBackend`: singleton, acts as proxy for the frontend (`MMVimController`), implements `MMBackendProtocol`
 
-*MacVim*:
+*!MacVim*:
   * `MMAppController`: singleton, delegate of `NSApp`, manages the app, listens for incoming connections from Vim on a named connection, the `MMAppController` object is vended by this connection, maintains list of `MMVimControllers`, implements `MMAppProtocol`
   * `MMVimController`: manages one Vim process, handles everything not directly relating to views, manages main menu, owns `MMWindowController`, should in theory be able to run without a window, acts as proxy object for the backend (`MMBackend`), implements `MMFrontendProtocol`
   * `MMWindowController`: derives from `NSWindowController`, handles everything view related, loads `VimWindow.nib`, owns `MMTextStorage`/`MMTextView`
@@ -22,7 +22,6 @@ Here is a short overview of the MacVim source code. _Note that the information i
   * State query messages can be sent synchronously, just add the appropriate message in `MMBackendProtocol`.
   * Output from Vim to !MacVim arrives in `processCommandQueue:` in `MMFrontendProtocol`.
   * Take care not to call `processInput:data:` too often or the app might stall.  If a message may be sent very rapidly, then the `wait` flag in `MMVimController` `sendMessage:data:wait:` should be set to `NO`.
-
 
 
 
