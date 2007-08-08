@@ -26,9 +26,9 @@ This will create the folder vim7 and populate it with the Vim source (be patient
 Next, you need to patch the Vim source and copy the prototype header file. This can be done by typing
 {{{
 localhost:~ user$ cd vim7/src
-localhost:~ user$ cp ~/Desktop/macvim.diff .
-localhost:~ user$ cp ~/Desktop/gui_macvim.pro proto/
-localhost:~ user$ patch -p0 -i macvim.diff
+localhost:~/vim7/src user$ cp ~/Desktop/macvim.diff .
+localhost:~/vim7/src user$ cp ~/Desktop/gui_macvim.pro proto/
+localhost:~/vim7/src user$ patch -p0 -i macvim.diff
 }}}
 
 The next thing is to download the !MacVim source and put it in the `vim7/src` folder as follows:
@@ -38,9 +38,9 @@ localhost:~/vim7/src user$ svn co http://macvim.googlecode.com/svn/trunk/ MacVim
 
 Now, build Vim 
 {{{
-localhost:~ user$ autoconf
-localhost:~ user$ ./configure --enable-gui=macvim
-localhost:~ user$ make
+localhost:~/vim7/src user$ autoconf
+localhost:~/vim7/src user$ ./configure --enable-gui=macvim
+localhost:~/vim7/src user$ make
 }}}
 This should produce an executable named `Vim` in the `vim7/src` folder. You can run it in terminal mode (no `-g` switch) and type `:ver` to confirm that it includes the !MacVim GUI code (although we are _not_ done yet).
 
@@ -60,6 +60,8 @@ If you have one version of !MacVim in e.g. `/Applications` and then build anothe
 
 You can now run !MacVim-devel whilst building and running !MacVim in Xcode.
 
+_I have recently been experiencing problems with this solution_. _For some reason, when I run `MacVim-devel` (which I typically put inside `/Applications`) the executable inside `build/Debug` is used instead_. _I do not know why this happens, but it certainly is very annoying...if anybody figures out a workaround to this problem, please let me know_.
+
 
 ===Building a universal binary===
 
@@ -67,3 +69,5 @@ By default only a native binary will be built.  To build a universal binary you 
   * Select `MacVim` under `Targets` in the left-hand column in Xcode, then press Cmd-I to open up the 'Info' window
   * Click the `Build` tab and locate the `Architectures` setting, double-click on it and select both `PowerPC` and `Intel`
   * Do the same for the PSMTabBarControlProject
+
+
