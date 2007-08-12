@@ -1,0 +1,36 @@
+#summary User defaults.
+#labels Featured
+
+Some of the behaviour of !MacVim can be changed by editing its user defaults database. Here is a quick summary of what you can change and how to do so.
+
+To see what settings are currently in the database, start Terminal and type
+{{{
+localhost:~ user$ defaults read org.vim.MacVim
+}}}
+
+To change a setting, type
+{{{
+localhost:~ user$ defaults write org.vim.MacVim <setting> <value>
+}}}
+where `<setting>` is the name of the setting and `<value>` the value you want to set it to. For instance, to hide the gui status line, type
+{{{
+localhost:~ user$ defaults write org.vim.MacVim MMStatuslineOff 1
+}}}
+and restart !MacVim.
+
+Here is a list of current user defaults; this list may well be out of date, check `MacVim.m` for the current list of defaults.
+  * `MMTabMinWidth`, integer, minimum width of a tab in pixels
+  * `MMTabMaxWidth`, integer, maximum width of a tab in pixels
+  * `MMTabOptimumWidth`, integer, optimum width of a tab in pixels (this is the width the tab will be if all tabs can fit in the window)
+  * `MMStatuslineOff`, boolean, turn gui status line on or off
+  * `MMTextInsetLeft`, integer, the text view is inset this many pixels from the left
+  * `MMTextInsetRight`, integer
+  * `MMTextInsetTop`, integer
+  * `MMTextInsetBottom`, integer
+  * `MMTerminateAfterLastWindowClosed`, boolean, quit !MacVim when the last window is closed
+  * `MMTypesetter`, string, which typesetter to use, either "NSTypesetter" or "MMTypesetter" (you should not need to change this)
+  * `MMCellWidthMultiplier`, float, the width of a character in em-units (i.e. 1em = the width of 'm' in the current font)
+  * `MMBaselineOffset`, float, adjusts the baseline (negative values moves it upwards)
+  * `MMTranslateCtrlClick`, boolean, translates ctrl-clicks to a right-click (for people with only one mouse button)
+
+Finally, to remove _all_ settings, delete the file `~/Library/Preferences/org.vim.MacVim.plist`.
