@@ -1,4 +1,4 @@
-#summary How to edit !MacVim settings.
+#summary How to edit MacVim settings.
 #labels Featured
 
 Some of the behaviour of !MacVim can be changed by editing its user defaults database. Here is a quick summary of what you can change and how to do so.
