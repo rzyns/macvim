@@ -2,7 +2,7 @@
 
 Here is a short overview of the !MacVim source code. _Note that the information in here is not intended to be exhaustive and it might not be completely up to date_.
 
-!MacVim consists of two major parts: !MacVim.app and Vim.  Vim is the actual text editor and contains no GUI related code. !MacVim.app is the GUI which coordinates one or more Vim processes at the same time. Code shared between !MacVim and Vim goes in `MacVim.[h|m]`.
+!MacVim consists of two major parts: !MacVim.app and Vim.  Vim is the actual text editor and contains no GUI (as in !AppKit) related code. !MacVim.app is the GUI which coordinates one or more Vim processes at the same time. Code shared between !MacVim and Vim goes in `MacVim.[h|m]`.
 
 *Vim*:
   * Vim calls `gui_mch_*` etc. are in `gui_macvim.m`, these mostly passes calls on to `MMBackend`.
@@ -22,6 +22,7 @@ Here is a short overview of the !MacVim source code. _Note that the information 
   * State query messages can be sent synchronously, just add the appropriate message in `MMBackendProtocol`.
   * Output from Vim to !MacVim arrives in `processCommandQueue:` in `MMFrontendProtocol`.
   * Take care not to call `processInput:data:` too often or the app might stall.  If a message may be sent very rapidly, then the `wait` flag in `MMVimController` `sendMessage:data:wait:` should be set to `NO`.
+
 
 
 
