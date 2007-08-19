@@ -12,9 +12,9 @@ To change a setting, type
 {{{
 localhost:~ user$ defaults write org.vim.MacVim <setting> <value>
 }}}
-where `<setting>` is the name of the setting and `<value>` the value you want to set it to. For instance, to hide the gui status line, type
+where `<setting>` is the name of the setting and `<value>` the value you want to set it to. For instance, to make character spacing wider, type
 {{{
-localhost:~ user$ defaults write org.vim.MacVim MMStatuslineOff 1
+localhost:~ user$ defaults write org.vim.MacVim MMCellWidthMultiplier 1.4
 }}}
 and restart !MacVim.
 
@@ -22,7 +22,6 @@ Here is a list of current user defaults; this list may well be out of date, chec
   * `MMTabMinWidth`, integer, minimum width of a tab in pixels
   * `MMTabMaxWidth`, integer, maximum width of a tab in pixels
   * `MMTabOptimumWidth`, integer, optimum width of a tab in pixels (this is the width the tab will be if all tabs can fit in the window)
-  * `MMStatuslineOff`, boolean, turn gui status line on or off
   * `MMTextInsetLeft`, integer, the text view is inset this many pixels from the left
   * `MMTextInsetRight`, integer
   * `MMTextInsetTop`, integer
