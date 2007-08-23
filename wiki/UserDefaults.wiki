@@ -12,9 +12,9 @@ To change a setting, type
 {{{
 localhost:~ user$ defaults write org.vim.MacVim <setting> <value>
 }}}
-where `<setting>` is the name of the setting and `<value>` the value you want to set it to. For instance, to make character spacing wider, type
+where `<setting>` is the name of the setting and `<value>` the value you want to set it to. For instance, to have new files open in the current window instead of in a new window, type
 {{{
-localhost:~ user$ defaults write org.vim.MacVim MMCellWidthMultiplier 1.4
+localhost:~ user$ defaults write org.vim.MacVim MMOpenFilesInTabs 1
 }}}
 and restart !MacVim.
 
@@ -31,5 +31,6 @@ Here is a list of current user defaults; this list may well be out of date, chec
   * `MMCellWidthMultiplier`, float, the width of a character in em-units (i.e. 1em = the width of 'm' in the current font)
   * `MMBaselineOffset`, float, adjusts the baseline (negative values moves it upwards)
   * `MMTranslateCtrlClick`, boolean, translates ctrl-clicks to a right-click (for people with only one mouse button)
+  * `MMOpenFilesInTabs`, boolean, "Open Files" event will open files in tabs in the topmost window instead of in a new window
 
 Finally, to remove _all_ settings, delete the file `~/Library/Preferences/org.vim.MacVim.plist`.
