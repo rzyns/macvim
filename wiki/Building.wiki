@@ -49,18 +49,16 @@ Finally, open `MacVim.xcodeproj` (which is inside the `MacVim` folder), and clic
 That's it!
 
 
-===Building !MacVim whilst using it to code===
+===Running several versions of !MacVim simultaneously===
 
 If you have one version of !MacVim in e.g. `/Applications` and then build another with Xcode and try to run it, there will be trouble (since both are listening to the same named port for new Vim connections).  To get around this do the following (assuming you have installed !MacVim in the Applications folder):
   * Open a Finder window on `/Applications`
   * Rename `MacVim` to `MacVim-devel`
   * Ctrl-click on the `MacVim-devel` icon and choose 'Show Package Contents'
   * In the window that opens, double-click on `Contents` and then on `Info.plist`; this will bring up the 'Property List Editor'
-  * Expand `Root`, change `CFBundleIdentifier` to `org.vim.MacVim-devel`, and change `CFBundleName` to `MacVim-devel`; save and quit the 'Property List Editor'
+  * Expand `Root`, change `CFBundleIdentifier` to `org.vim.MacVim-devel`; save and quit the 'Property List Editor'
 
 You can now run !MacVim-devel whilst building and running !MacVim in Xcode.
-
-_I have recently been experiencing problems with this solution_. _For some reason, when I run `MacVim-devel` (which I typically put inside `/Applications`) the executable inside `build/Debug` is used instead_. _I do not know why this happens, but it certainly is very annoying...if anybody figures out a workaround to this problem, please let me know_.
 
 
 ===Building a universal binary===
@@ -69,5 +67,6 @@ By default only a native binary will be built.  To build a universal binary you 
   * Select `MacVim` under `Targets` in the left-hand column in Xcode, then press Cmd-I to open up the 'Info' window
   * Click the `Build` tab and locate the `Architectures` setting, double-click on it and select both `PowerPC` and `Intel`
   * Do the same for the PSMTabBarControlProject
+
 
 
