@@ -1,12 +1,14 @@
 #summary How to build MacVim
 #labels Featured,Phase-Implementation
 
+_Note: Patching procedure changed with r245 on Sep 18 2007_
+
 ===For the impatient===
 
 Here is the summary on what you need to do:
   * Get the vim7 source
   * Check out the !MacVim source from the Google code repository and put it inside `vim7/src/MacVim`
-  * Download the latest patch archive `patch-r*.tar.gz` from the 'Downloads' tab.  This archive contains `macvim.diff`, `gui_macvim.pro`.  Apply the patch to the vim7 source code and put `gui_macvim.pro` inside `vim7/src/proto`
+  * Download the latest patch archive `macvim-r*-patch.tar.gz` from the 'Downloads' tab. The archive contains `macvim.diff`, `runtime/doc/gui_mac.txt`, and `src/proto/gui_macvim.pro`. Unarchive in the vim7/ folder and apply the patch `macvim.diff`.
   * Build Vim with `configure --enable-gui=macvim` and then `make`
   * Open `MacVim/MacVim.xcodeproj` and build it
 
@@ -15,24 +17,25 @@ If those instructions were not enough, then read on...
 
 ===The long version===
 
-First download the latest patch archive `patch-r*.tar.gz` from the `Downloads` tab.  Unarchive the files `macvim.diff` and `gui_macvim.h` to the Desktop (you can put them wherever, but in what follows I will assume you put them there).
-
-Next, you need to get the Vim source code.  In order to do this, start Terminal and type
+First get the Vim source code.  In order to do this, start Terminal and type
 {{{
 localhost:~ user$ svn co https://vim.svn.sourceforge.net/svnroot/vim/vim7
 }}}
 This will create the folder vim7 and populate it with the Vim source (be patient, it can take a while).
 
-Next, you need to patch the Vim source and copy the prototype header file. This can be done by typing
+Next, you need to patch the Vim source and runtime files. Download `macvim-r*-patch.tar.gz` from the `Downloads` tab to the `~/vim7` folder. Then type
 {{{
-localhost:~ user$ cd vim7/src
-localhost:~/vim7/src user$ cp ~/Desktop/macvim.diff .
-localhost:~/vim7/src user$ cp ~/Desktop/gui_macvim.pro proto/
-localhost:~/vim7/src user$ patch -p0 -i macvim.diff
+localhost:~ user$ cd vim7/
+localhost:~/vim7 user$ tar xzf macvim-r*-patch.tar.gz
+}}}
+In this last step you must of course replace the star with the actual revision number of the patch you downloaded. Now you have extracted the patch `macvim.diff` and the supporting files `runtime/doc/gui_mac.txt` and `src/proto/gui_macvim.pro`. Apply the patch by typing
+{{{
+localhost:~/vim7 user$ patch -p0 -i macvim.diff
 }}}
 
-The next thing is to download the !MacVim source and put it in the `vim7/src` folder as follows:
+Next, check out the !MacVim source and put it in the `vim7/src/MacVim` folder as follows:
 {{{
+localhost:~/vim7 user$ cd src/
 localhost:~/vim7/src user$ svn co http://macvim.googlecode.com/svn/trunk/ MacVim
 }}}
 
@@ -42,7 +45,7 @@ localhost:~/vim7/src user$ autoconf
 localhost:~/vim7/src user$ ./configure --enable-gui=macvim
 localhost:~/vim7/src user$ make
 }}}
-This should produce an executable named `Vim` in the `vim7/src` folder. You can run it in terminal mode (no `-g` switch) and type `:ver` to confirm that it includes the !MacVim GUI code (although we are _not_ done yet).
+If there were no problems building you should now have an executable named `Vim` in the `vim7/src` folder.
 
 Finally, open `MacVim.xcodeproj` (which is inside the `MacVim` folder), and click the 'Build' button (Cmd+B).  This will build the application bundle `MacVim.app` inside `build/Release` (or `build/Debug`, depending on which build configuration is active).
 
@@ -70,3 +73,10 @@ By default only a native binary will be built.  To build a universal binary you 
 
 
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
