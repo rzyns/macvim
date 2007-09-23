@@ -8,7 +8,7 @@ _Note: Patching procedure changed with r245 on Sep 18 2007_
 Here is the summary on what you need to do:
   * Get the vim7 source
   * Check out the !MacVim source from the Google code repository and put it inside `vim7/src/MacVim`
-  * Download the latest patch archive `macvim-r*-patch.tar.gz` from the 'Downloads' tab. The archive contains `macvim.diff`, `runtime/doc/gui_mac.txt`, and `src/proto/gui_macvim.pro`. Unarchive in the `vim7/` folder and apply the patch `macvim.diff`.
+  * Download the latest patch archive `macvim-r*-patch.tar.gz` from the 'Downloads' tab. The archive contains `macvim.diff`, `runtime/doc/gui_mac.txt`, `runtime/colors/macvim.vim` and `src/proto/gui_macvim.pro`. Unarchive in the `vim7/` folder and apply the patch `macvim.diff`.
   * Build Vim with `configure --enable-gui=macvim` and then `make`
   * Open `MacVim/MacVim.xcodeproj` and build it
 
@@ -28,7 +28,7 @@ Next, you need to patch the Vim source and runtime files. Download `macvim-r*-pa
 localhost:~ user$ cd vim7/
 localhost:~/vim7 user$ tar xzf macvim-r*-patch.tar.gz
 }}}
-In this last step you must of course replace the star with the actual revision number of the patch you downloaded. Now you have extracted the patch `macvim.diff` and the supporting files `runtime/doc/gui_mac.txt` and `src/proto/gui_macvim.pro`. Apply the patch by typing
+In this last step you must of course replace the star with the actual revision number of the patch you downloaded. Now you have extracted the patch `macvim.diff` and the supporting files `runtime/doc/gui_mac.txt`, `runtime/colors/macvim.vim` and `src/proto/gui_macvim.pro`. Apply the patch by typing
 {{{
 localhost:~/vim7 user$ patch -p0 -i macvim.diff
 }}}
@@ -73,6 +73,8 @@ By default only a native binary will be built.  To build a universal binary you 
 
 
 
+ 
+ 
  
  
  
