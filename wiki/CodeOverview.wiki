@@ -11,8 +11,7 @@ Here is a short overview of the !MacVim source code. _Note that the information 
 *!MacVim*:
   * `MMAppController`: singleton, delegate of `NSApp`, manages the app, listens for incoming connections from Vim on a named connection, the `MMAppController` object is vended by this connection, maintains list of `MMVimControllers`, implements `MMAppProtocol`
   * `MMVimController`: manages one Vim process, handles everything not directly relating to views, manages main menu, owns `MMWindowController`, should in theory be able to run without a window, acts as proxy object for the backend (`MMBackend`), implements `MMFrontendProtocol`
-  * `MMWindowController`: derives from `NSWindowController`, handles everything view related, loads `VimWindow.nib`, owns `MMTextStorage`/`MMTextView`
-  * `VimWindow.nib`: all views, except for the text view, are connected in the nib
+  * `MMWindowController`: derives from `NSWindowController`, handles everything view related, owns `MMTextStorage`/`MMTextView`
   * `MainMenu.nib`: instantiates `MMAppController` and makes it the delegate of `NSApp`, the menus in this nib are ignored, menus are set up in `$VIM/gvimrc` and in `$VIMRUNTIME/menu.vim`
 
 
@@ -21,9 +20,7 @@ Here is a short overview of the !MacVim source code. _Note that the information 
   * Input from !MacVim to Vim that change state should go through `processInput:data:` in `MMBackendProtocol`.
   * State query messages can be sent synchronously, just add the appropriate message in `MMBackendProtocol`.
   * Output from Vim to !MacVim arrives in `processCommandQueue:` in `MMFrontendProtocol`.
-  * Take care not to call `processInput:data:` too often or the app might stall.  If a message may be sent very rapidly, then the `wait` flag in `MMVimController` `sendMessage:data:wait:` should be set to `NO`.
-
-
+  * Take care not to call `processInput:data:` too often or the app might stall.  Instead use sendMessage:data: in MMVimController to pass input to Vim, which will drop a message if it cannot be delivered immediately.  This should not pose a problem since Vim should hold the actual state and MacVim should only mirror it.  Sometimes this is not the case, e.g. when dragging to resize the window.  In such situations sendMessageNow:data:timeout: can be used instead (but only very sparingly and with extreme caution).
 
 
 
