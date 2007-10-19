@@ -59,6 +59,32 @@ localhost:~/vim7/src/MacVim user$ open build/Release/MacVim.app
 }}}
 
 
+==Updating an existing Git repository==
+
+If you already have the !MacVim.git repo then updating it is as easy as
+{{{
+localhost:~ user$ cd vim7
+localhost:~/vim7 user$ git pull
+}}}
+
+
+==Contributing with patches==
+
+Patches can be created using the git-format-patch command, for example
+{{{
+localhost:~/vim7 user$ git-format-patch master
+localhost:~/vim7 user$ git-format-patch HEAD^
+}}}
+The first version is useful if you have created a new branch and are keeping
+the master branch unmodified; it will create a patch including all the
+differences between the current branch and the master branch.  The second
+version will create a patch that contains all changes you made in your last
+commit.
+
+Once you have created a patch you should post it to the vim_mac mailing list,
+either manually or using git-send-email.
+
+
 
 =Running several versions of !MacVim simultaneously=
 
@@ -134,4 +160,3 @@ If there were no problems building you should now have an executable named `Vim`
 Finally, open `MacVim.xcodeproj` (which is inside the `MacVim` folder), and click the 'Build' button (Cmd+B).  This will build the application bundle `MacVim.app` inside `build/Release` (or `build/Debug`, depending on which build configuration is active).
 
 That's it!
-
