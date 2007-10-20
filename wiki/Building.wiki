@@ -111,7 +111,7 @@ By default only a native binary will be built.  To build a universal binary you 
 =Building !MacVim from the Subversion repository=
 
 *NOTE:* The subversion repository has been deprecated, please use Git to
-download and build MacVim.
+download and build !MacVim.
 
 ==For the impatient==
 
