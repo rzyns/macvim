@@ -72,17 +72,17 @@ localhost:~/vim7 user$ git pull
 
 Patches can be created using the git-format-patch command, for example
 {{{
-localhost:~/vim7 user$ git-format-patch master
+localhost:~/vim7 user$ git-format-patch origin/master
+}}}
+This will create a patch including all the differences between the
+current branch and the latest master branch you pulled from the public repo.
+{{{
 localhost:~/vim7 user$ git-format-patch HEAD^
 }}}
-The first version is useful if you have created a new branch and are keeping
-the master branch unmodified; it will create a patch including all the
-differences between the current branch and the master branch.  The second
-version will create a patch that contains all changes you made in your last
-commit.
+This will create a patch that contains all changes included in your last commit.
 
 Once you have created a patch you should post it to the vim_mac mailing list,
-either manually or using git-send-email.
+either manually or by using git-send-email.
 
 
 
