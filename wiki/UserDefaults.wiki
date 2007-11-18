@@ -18,6 +18,11 @@ localhost:~ user$ defaults write org.vim.MacVim MMOpenFilesInTabs 1
 }}}
 and restart !MacVim.
 
+Finally, to remove _all_ settings, type
+{{{
+localhost:~ user$ defaults delete org.vim.MacVim
+}}}
+
 Here is a list of current user defaults; this list may well be out of date, check `MacVim.m` for the current list of defaults.
   * `MMTabMinWidth`, integer, minimum width of a tab in pixels
   * `MMTabMaxWidth`, integer, maximum width of a tab in pixels
@@ -32,5 +37,4 @@ Here is a list of current user defaults; this list may well be out of date, chec
   * `MMBaselineOffset`, float, adjusts the baseline (negative values moves it upwards)
   * `MMTranslateCtrlClick`, boolean, translates ctrl-clicks to a right-click (for people with only one mouse button)
   * `MMOpenFilesInTabs`, boolean, "Open Files" event will open files in tabs in the topmost window instead of in a new window
-
-Finally, to remove _all_ settings, delete the file `~/Library/Preferences/org.vim.MacVim.plist`.
+  * `MMLoginShell`, boolean, open each Vim process in a login shell so that the user environment settings get sourced (useful if e.g. your $PATH variable isn't set properly when you run !MacVim)
