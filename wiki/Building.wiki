@@ -3,8 +3,6 @@
 
 =Building !MacVim from the Git repository=
 
-*NOTE:* This is the official way of building !MacVim.
-
 ==Summary==
 
 If you know what you are doing, then this should be enough to get you going:
@@ -96,6 +94,8 @@ If you have one version of !MacVim in e.g. `/Applications` and then build anothe
   * Expand `Root`, change `CFBundleIdentifier` to `org.vim.MacVim-devel`; save and quit the 'Property List Editor'
 
 You can now run !MacVim-devel whilst building and running !MacVim in Xcode.
+
+Alternatively, if you can leave the version in `/Applications` alone (say, if this is the snapshot build) and modify the CFBundleIdentifier of the version you are building instead.  To do this, open the file `Info.plist` inside the `src/MacVim` folder and change the value of CFBundleIdentifier (e.g. add `-devel` to the end).  Each time !MacVim is built it will copy `Info.plist` to the app bundle so that your custom built !MacVim will have a different CFBundleIdentifier from the version inside `/Applications`.
 
 
 =Building a universal binary=
