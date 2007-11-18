@@ -107,56 +107,12 @@ By default only a native binary will be built.  To build a universal binary you 
 
 
 
+=Random notes=
+
+  * At the moment the Vim runtime files are not updated inside the app bundle if they are modified.  If you modify any runtime files, then you have to clean the !MacVim project and build it again.
+
+
 
 =Building !MacVim from the Subversion repository=
 
-*NOTE:* The subversion repository has been deprecated, please use Git to
-download and build !MacVim.
-
-==For the impatient==
-
-Here is the summary on what you need to do:
-  * Get the vim7 source
-  * Check out the !MacVim source from the Google code repository and put it inside `vim7/src/MacVim`
-  * Download the latest patch archive `macvim-r*-patch.tar.gz` from the 'Downloads' tab. The archive contains `macvim.diff`, `runtime/doc/gui_mac.txt`, `runtime/colors/macvim.vim` and `src/proto/gui_macvim.pro`. Unarchive in the `vim7/` folder and apply the patch `macvim.diff`.
-  * Build Vim with `configure --enable-gui=macvim` and then `make`
-  * Open `MacVim/MacVim.xcodeproj` and build it
-
-If those instructions were not enough, then read on...
-
-
-==The long version==
-
-First get the Vim source code.  In order to do this, start Terminal and type
-{{{
-localhost:~ user$ svn co https://vim.svn.sourceforge.net/svnroot/vim/vim7
-}}}
-This will create the folder vim7 and populate it with the Vim source (be patient, it can take a while).
-
-Next, you need to patch the Vim source and runtime files. Download `macvim-r*-patch.tar.gz` from the `Downloads` tab to the `~/vim7` folder. Then type
-{{{
-localhost:~ user$ cd vim7/
-localhost:~/vim7 user$ tar xzf macvim-r*-patch.tar.gz
-}}}
-In this last step you must of course replace the star with the actual revision number of the patch you downloaded. Now you have extracted the patch `macvim.diff` and the supporting files `runtime/doc/gui_mac.txt`, `runtime/colors/macvim.vim` and `src/proto/gui_macvim.pro`. Apply the patch by typing
-{{{
-localhost:~/vim7 user$ patch -p0 -i macvim.diff
-}}}
-
-Next, check out the !MacVim source and put it in the `vim7/src/MacVim` folder as follows:
-{{{
-localhost:~/vim7 user$ cd src/
-localhost:~/vim7/src user$ svn co http://macvim.googlecode.com/svn/trunk/ MacVim
-}}}
-
-Now, build Vim 
-{{{
-localhost:~/vim7/src user$ autoconf
-localhost:~/vim7/src user$ ./configure --enable-gui=macvim
-localhost:~/vim7/src user$ make
-}}}
-If there were no problems building you should now have an executable named `Vim` in the `vim7/src` folder.
-
-Finally, open `MacVim.xcodeproj` (which is inside the `MacVim` folder), and click the 'Build' button (Cmd+B).  This will build the application bundle `MacVim.app` inside `build/Release` (or `build/Debug`, depending on which build configuration is active).
-
-That's it!
+The subversion repository has been deprecated, please use Git to download and build !MacVim.
