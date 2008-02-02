@@ -20,8 +20,9 @@ build but no windows open when you run the application.
 If you already have !MacPorts installed, then you can install Git by opening a Terminal window and
 typing
 {{{
-localhost:~ user$ sudo port install git-core
+localhost:~ user$ sudo port install git-core +svn
 }}}
+(The `+svn` flag is not strictly necessary, but if you might ever need to use the `git-svn` command in the future it is best to include it.)
 
 If you do not already have !MacPorts installed, be warned that installing both !MacPorts and Git will take a _long_ time. A faster alternative is to install Git directly from the sources, but it requires that you know what you are doing.
 
@@ -32,6 +33,9 @@ To install Git from the source code archive:
   * make and install Git (gotcha: it is not possible to build the documentation without installing additional libraries first; check the INSTALL file that comes with the Git source code)
 More detailed instructions can be found [http://funkaoshi.com/blog/building-git-on-mac-os-x here].
 
+As an optional extra you might want to configure the `git-svn` command (this is not necessary if you only want to compile !MacVim). To do this, follow these _optional steps_:
+  * download and install [http://downloads.open.collab.net/binaries.html subversion]
+  * add the line `export PERL5LIB="/usr/local/lib/svn-perl"` to `~/.profile` so that `git-svn` can find the Perl bindings to Subversion
 
 ==Downloading and building==
 
