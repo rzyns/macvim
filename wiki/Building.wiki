@@ -17,12 +17,20 @@ build but no windows open when you run the application.
 
 ==Installing Git==
 
-If you have !MacPorts then you can install Git by opening a Terminal window and
+If you already have !MacPorts installed, then you can install Git by opening a Terminal window and
 typing
 {{{
 localhost:~ user$ sudo port install git-core
 }}}
-(This might take a while.)
+
+If you do not already have !MacPorts installed, be warned that installing both !MacPorts and Git will take a _long_ time. A faster alternative is to install Git directly from the sources, but it requires that you know what you are doing.
+
+To install Git from the source code archive:
+  * download the latest Git source code archive from http://git.or.cz
+  * if you are compiling on Mac OS X 10.4, then you also need to download the [http://sourceforge.net/projects/expat/ Expat library] _(skip this step if you are running Mac OS X 10.5)_
+  * make and install Expat _(skip this step if you are running Mac OS X 10.5)_
+  * make and install Git (gotcha: it is not possible to build the documentation without installing additional libraries first; check the INSTALL file that comes with the Git source code)
+More detailed instructions can be found [http://funkaoshi.com/blog/building-git-on-mac-os-x here].
 
 
 ==Downloading and building==
