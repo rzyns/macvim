@@ -114,7 +114,7 @@ Alternatively, if you can leave the version in `/Applications` alone (say, if th
 
 =Building a universal binary=
 
-By default only a native binary will be built.  To build a universal binary you must first pass `--with-mac-arch=both` to `configure` and then use the 'Universal' build configuration when building MacVim.app in Xcode.
+By default only a native binary will be built.  To build a universal binary you must first pass `--with-mac-arch=both` to `configure` and then use the 'Universal' build configuration when building !MacVim.app in Xcode.
 
 Using only Terminal, do the following (assuming you've checked out the source code into the folder `~/vim7`):
 {{{
