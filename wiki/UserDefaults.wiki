@@ -1,6 +1,8 @@
 #summary How to edit MacVim settings.
 #labels Featured
 
+_As of snapshot 20 !MacVim has a preferences panel where all the relevant user defaults can be changed. The information below is somewhat outdated. Check `:h macvim-prefs` in !MacVim for more up-to-date information._
+
 Some of the behaviour of !MacVim can be changed by editing its user defaults database. Here is a quick summary of what you can change and how to do so.
 
 To see what settings are currently in the database, start Terminal and type
