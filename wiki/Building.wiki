@@ -95,7 +95,7 @@ More detailed instructions can be found [http://funkaoshi.com/blog/building-git-
 
 As an optional extra you might want to configure the `git-svn` command (this is not necessary if you only want to compile !MacVim). To do this, follow these _optional steps_:
   * download and install [http://downloads.open.collab.net/binaries.html Subversion]
-  * add the line `export PERL5LIB="/usr/local/lib/svn-perl"` to `~/.profile` so that `git-svn` can find the Perl bindings to Subversion
+  * add the line `export PERL5LIB="/opt/subversion/lib/svn-perl"` to `~/.profile` so that `git-svn` can find the Perl bindings to Subversion
 
 
 
