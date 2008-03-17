@@ -1,7 +1,7 @@
 #summary Frequently Asked Questions
 #labels Featured
 
-=== No window opens in MacVim even when I select "New Window" from the "File" menu! ===
+=== No window opens in !MacVim even when I select "New Window" from the "File" menu! ===
 
 This is caused by the "Logitech Control Center" (LCC) - a piece of software that comes with Logitech hardware. LCC interferes with other applications on your system and can cause all sorts of problems, !MacVim is far from the only program that stops working when LCC is installed.
 
