@@ -36,6 +36,8 @@ configure then everything will compile but !MacVim won't open any windows when
 you start it.  After `make` finishes you should have a binary named `Vim` in
 the `vim7/src` folder.
 
+_Optional:_ If you want to build !MacVim with custom features, then you need to pass the appropriate flag to the `configure` script.  To see what options are available, type `./configure --help` (ensure that the working directory is `~/vim7/src` first).  For example, to compile !MacVim with Perl support substitute the second line above with `./configure --enable-gui=macvim --enable-perlinterp`.
+
 The final step is to build the !MacVim application.
 {{{
 localhost:~/vim7/src user$ cd MacVim
