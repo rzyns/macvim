@@ -10,7 +10,8 @@ You must uninstall LCC in order to run !MacVim. As an alternative to LCC, you ma
 
 === Backspace does not work ===
 
-Add the following line to your ~/.vimrc
+Add the following line to your ~/.vimrc (create that file if it does not already exists):
 {{{
 set bs=indent,eol,start
 }}}
+and restart !MacVim.
