@@ -6,3 +6,11 @@
 This is caused by the "Logitech Control Center" (LCC) - a piece of software that comes with Logitech hardware. LCC interferes with other applications on your system and can cause all sorts of problems, !MacVim is far from the only program that stops working when LCC is installed.
 
 You must uninstall LCC in order to run !MacVim. As an alternative to LCC, you may want to consider using  [http://orderedbytes.com/controllermate/ ControllerMate].
+
+
+=== Backspace does not work ===
+
+Add the following line to your ~/.vimrc
+{{{
+set bs=indent,eol,start
+}}}
