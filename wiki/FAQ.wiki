@@ -15,3 +15,12 @@ Add the following line to your ~/.vimrc (create that file if it does not already
 set bs=indent,eol,start
 }}}
 and restart !MacVim.
+
+
+=== Monaco 10pt is jagged even though 'antialias' is set ===
+
+Open up Terminal and type
+{{{
+defaults write org.vim.MacVim AppleSmoothFixedFontsSizeThreshold 1
+}}}
+and restart !MacVim.
