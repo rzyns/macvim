@@ -1,22 +1,6 @@
 #summary Frequently Asked Questions
 #labels Featured
 
-=== No window opens in !MacVim even when I select "New Window" from the "File" menu! ===
-
-This is caused by the "Logitech Control Center" (LCC) - a piece of software that comes with Logitech hardware. LCC interferes with other applications on your system and can cause all sorts of problems, !MacVim is far from the only program that stops working when LCC is installed.
-
-You must uninstall LCC in order to run !MacVim. As an alternative to LCC, you may want to consider using  [http://orderedbytes.com/controllermate/ ControllerMate].
-
-
-=== Backspace does not work ===
-
-Add the following line to your ~/.vimrc (create that file if it does not already exists):
-{{{
-set bs=indent,eol,start
-}}}
-and restart !MacVim.
-
-
 === Monaco 10pt is jagged even though 'antialias' is set ===
 
 Open up Terminal and type
@@ -24,3 +8,22 @@ Open up Terminal and type
 defaults write org.vim.MacVim AppleSmoothFixedFontsSizeThreshold 1
 }}}
 and restart !MacVim.
+
+
+=== How to make open and save dialogs show hidden files ===
+
+Open up Terminal and type
+{{{
+defaults write org.vim.MacVim AppleShowAllFiles 1
+}}}
+and restart !MacVim.
+
+
+=== No window opens in !MacVim even when I select "New Window" from the "File" menu! ===
+
+Update to snapshot 28 or later.
+
+
+=== Backspace does not work ===
+
+Update to snapshot 28 or later (or set the option 'backspace' to "indent,eol,start").
