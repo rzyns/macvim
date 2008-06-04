@@ -19,6 +19,11 @@ defaults write org.vim.MacVim AppleShowAllFiles 1
 and restart !MacVim.
 
 
+=== The keyboard layout switches on its own when I change mode ===
+
+Add "set imd" to your "~/.vimrc" file (see ":h 'imd'" for more information).
+
+
 === No window opens in !MacVim even when I select "New Window" from the "File" menu! ===
 
 Update to snapshot 28 or later.
