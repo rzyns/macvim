@@ -24,6 +24,11 @@ and restart !MacVim.
 Add "set imd" to your "~/.vimrc" file (see ":h 'imd'" for more information).
 
 
+=== The toolbar does not stay hidden when restarting !MacVim ===
+
+Add "set go-=T" to "~/.gvimrc" (see ":h 'go'" for more information).
+
+
 === No window opens in !MacVim even when I select "New Window" from the "File" menu! ===
 
 Update to snapshot 28 or later.
