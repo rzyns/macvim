@@ -16,7 +16,7 @@ build but no windows open when you run the application.
 
 ==Downloading and building==
 
-To get the source code you need Git; see below for installation instructions if you have not installed Git already.
+To get the source code you need Git, see below for installation instructions if you have not installed Git already. (Note that it is possible to get the source code without installing Git but it will be much easier to keep your local copy of the source code up to date once you have installed Git.  See the comment at the end of this page on how to download the source code without using Git.)
 
 Once you have Git installed you first have to clone the !MacVim.git repo
 {{{
