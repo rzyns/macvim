@@ -134,7 +134,11 @@ The app bundle can be found in the folder `~/vim7/src/MacVim/build/Universal`.
 =Random notes=
 
   * At the moment the Vim runtime files are not updated inside the app bundle if they are modified.  If you modify any runtime files, then you have to clean the !MacVim project and build it again.
-
+  * To build with Ruby support on OS X 10.4 (Tiger), you may get an error from `configure` saying that the Ruby header files cannot be found.  If you run into this problem, open up Terminal and type
+{{{
+cd /usr/lib/ruby/1.8/powerpc-darwin8.0
+sudo ln -s ../universal-darwin8.0/*.h ./
+}}}
 
 
 =Building !MacVim from the Subversion repository=
