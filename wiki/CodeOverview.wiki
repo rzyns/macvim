@@ -1,6 +1,6 @@
 #summary Overview of the MacVim source code
 
-_Note that this document is quite out of date, check the README file that comes with the source code (inside the `src/MacVim` folder)._
+_Note that this document is quite out of date, check the README file that comes with the source code (inside the `src/MacVim` folder) for more up to date information._
 
 !MacVim consists of two major parts: !MacVim.app and Vim.  Vim is the actual text editor and contains no GUI (as in !AppKit) related code. !MacVim.app is the GUI which coordinates one or more Vim processes at the same time. Code shared between !MacVim and Vim goes in `MacVim.[h|m]`.
 
@@ -21,4 +21,3 @@ _Note that this document is quite out of date, check the README file that comes 
   * State query messages can be sent synchronously, just add the appropriate message in `MMBackendProtocol`.
   * Output from Vim to !MacVim arrives in `processCommandQueue:` in `MMFrontendProtocol`.
   * Take care not to call `processInput:data:` too often or the app might stall.  Instead use sendMessage:data: in MMVimController to pass input to Vim, which will drop a message if it cannot be delivered immediately.  This should not pose a problem since Vim should hold the actual state and !MacVim should only mirror it.  Sometimes this is not the case, e.g. when dragging to resize the window.  In such situations sendMessageNow:data:timeout: can be used instead (but only very sparingly and with extreme caution).
-
