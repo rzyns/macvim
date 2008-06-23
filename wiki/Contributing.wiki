@@ -5,7 +5,7 @@
 
 ==First steps==
 
-First of all, following the [Building] instructions on how to get the source code.  For simplicity I will assume you have a newly cloned version of the !MacVim repository.  Also, when you eventually submit a patch it helps if you have told Git your name and email address because this shows up in the commit history (so that other people may know that you wrote the patch and how to contact you).  To do this, I would type
+First of all, follow the [Building] instructions on how to get the source code.  For simplicity I will assume you have a newly cloned version of the !MacVim repository.  Also, when you eventually submit a patch it helps if you have told Git your name and email address because this shows up in the commit history (so that other people may know that you wrote the patch and how to contact you).  To do this, I would type
 
 {{{
 git-config --global user.name "Bjorn Winckler"
