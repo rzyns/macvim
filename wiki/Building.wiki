@@ -61,7 +61,7 @@ localhost:~/vim7 user$ git pull
 
 ==Contributing with patches==
 
-See the wiki on [Contributing].
+See the wiki page on [Contributing].
 
 =Installing Git=
 
