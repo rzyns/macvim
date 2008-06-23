@@ -137,4 +137,4 @@ git-branch
 }}}
 
 
-That's all I can think of for the moment.  If you have any questions please post to the http://groups.google.com/group/vim_mac vim_mac] mailing list.  If you have any Git tips or tricks of your own you may want to leave a comment on this page.
+That's all I can think of for the moment.  If you have any questions please post to the [http://groups.google.com/group/vim_mac vim_mac] mailing list.  If you have any Git tips or tricks of your own you may want to leave a comment on this page.
