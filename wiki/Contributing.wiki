@@ -12,7 +12,7 @@ git-config --global user.name "Bjorn Winckler"
 git-config --global user.email "bjorn.winckler@gmail.com"
 }}}
 
-(You should obviously put your own name and email address in there.)
+(You should obviously put your own name and email address in there.)  This step only needs to be carried out once; the `--global` switch ensures that all Git repositories you have from now on will know your name and email.
 
 
 ==Branching and commiting==
@@ -52,7 +52,7 @@ This will make a commit including all modified files (but not newly created file
 
 ==Updating to the latest version==
 
-While you are working on your feature it is not entirely unlikely that commits are made to the public Git repo.  In this situation you will probably want to update your "master" branch to be up-to-date with the public repo.  Before doing this you should make sure you have no uncommited changes (commit first if you do), then you switch back to the "master" branch and pull the latest version with two commands:
+While you are working on your feature it is not entirely unlikely that commits are made to the public Git repo.  In this situation you will probably want to update your "master" branch to be up-to-date with the public repo.  Before doing this you should make sure you have no uncommited changes (commit first if you do), then you switch to the "master" branch and pull the latest version with two commands:
 
 {{{
 git-checkout master
