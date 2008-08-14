@@ -1,4 +1,5 @@
 #summary How to edit MacVim settings.
+#labels Deprecated
 
 _As of snapshot 20 !MacVim has a preferences panel where all the relevant user defaults can be changed. The information below is somewhat outdated. Check `:h macvim-prefs` in !MacVim for more up-to-date information._
 
