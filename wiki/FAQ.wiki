@@ -16,6 +16,16 @@ defaults write org.vim.MacVim AppleSmoothFixedFontsSizeThreshold 1
 and restart !MacVim.
 
 
+=== The keyboard layout switches on its own when I change mode ===
+
+Add "set imd" to your "~/.vimrc" file (see ":h 'imd'" for more information).
+
+
+=== The toolbar does not stay hidden when restarting !MacVim ===
+
+Add "set go-=T" to "~/.gvimrc" (see ":h 'go'" for more information).
+
+
 === How to make open and save dialogs show hidden files ===
 
 _!MacVim 7.2 stable 1 and Snapshot 33 (or later) have a checkbox to show hidden files in the Open dialog box._
@@ -25,16 +35,6 @@ Open up Terminal and type
 defaults write org.vim.MacVim AppleShowAllFiles 1
 }}}
 and restart !MacVim.
-
-
-=== The keyboard layout switches on its own when I change mode ===
-
-Add "set imd" to your "~/.vimrc" file (see ":h 'imd'" for more information).
-
-
-=== The toolbar does not stay hidden when restarting !MacVim ===
-
-Add "set go-=T" to "~/.gvimrc" (see ":h 'go'" for more information).
 
 
 === No window opens in !MacVim even when I select "New Window" from the "File" menu! ===
