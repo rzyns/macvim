@@ -1,0 +1,9 @@
+#summary Link to latest snapshot with release info
+
+= Regarding snapshots =
+
+The snapshot builds of !MacVim uses newly released and untested versions of the source code and are released fairly often.  Use these if you want access to the latest features and bug fixes but be aware that they may not behave as expected (which translates to _save often_).  That being said, if a snapshot has been released for a week or more that usually means that it is fairly stable (not to mention that I do all development using the latest snapshot).
+
+= Download =
+
+The latest snapshot is Snapshot 34 which was released Saturday the 16th of August 2006.
