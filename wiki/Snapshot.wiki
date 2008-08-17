@@ -1,4 +1,4 @@
-#summary Link to latest snapshot with release info
+#summary Link to latest snapshot with change log
 
 = Regarding snapshots =
 
@@ -6,4 +6,27 @@ The snapshot builds of !MacVim uses newly released and untested versions of the 
 
 = Download =
 
-The latest snapshot is [http://macvim.googlecode.com/files/MacVim-snapshot-34.tbz Snapshot 34] which was released Saturday the 16th of August 2006.  If the download fails, please try the downloads mirror.
+The latest snapshot is [http://macvim.googlecode.com/files/MacVim-snapshot-34.tbz Snapshot 34] which was released Saturday the 16th of August 2006.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+
+= Change log =
+
+_Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+Vim 7.2, file-open options, Quickstart, ...
+
+This snapshot is based on the recently released Vim 7.2 and it contains
+some new features and bug fixes.  Here's a partial list:
+
+  * More options on how new files should open (in tabs/splits/etc.): Open the preferences to check this out.
+  * Quickstart: With this feature enabled new windows open instantaneously (but _not_ if you use the 'mvim' script).  It is disabled by default so go to the Advanced preferences to enable it (and be sure to read the "disclaimer"...note that any changes to ~/.vim or its subdirectories are automatically detected on Leopard).
+  * The ATSUI renderer has received a few bug fixes and it now includes mouse support (it can be enabled in the Advanced prefs).  (bug fixes by Jjgod Jiang)
+  * Some of the old toolbar icons have been resurrected.
+  * The current directory is handled more consistently: New windows always have the user's home directory set as current.  Opening a file in the Finder results in the current directory being set to the directory the file is in (unless the file opened in a window with other files already open).
+  * Windows opened from the Dock menu are in focus.
+  * Menu item to toggle the Plug-in drawer (Matt Tolton).
+  * Now possible to set 'linespace' in [g]vimrc.
+  * Help file cleanup (Michael Wookey).
+  * Problems with ptys on Leopard fixed (Ben Schmidt).
+  * (Hopefully) no more annoying "dropping incoming DO message ..." warnings.
+  * Scroll wheel (track pad) should behave better with fast machines (Issue 100)
+  * Various bug fixes...
