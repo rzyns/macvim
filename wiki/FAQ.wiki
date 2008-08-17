@@ -26,7 +26,7 @@ Add "set imd" to your "~/.vimrc" file (see ":h 'imd'" for more information).
 Add "set go-=T" to "~/.gvimrc" (see ":h 'go'" for more information).
 
 
-=== How to make open and save dialogs show hidden files ===
+=== How to make Open and Save dialogs show hidden files ===
 
 _!MacVim 7.2 stable 1 and Snapshot 33 (or later) have a checkbox to show hidden files in the Open dialog box._
 
