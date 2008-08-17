@@ -6,4 +6,4 @@ The snapshot builds of !MacVim uses newly released and untested versions of the 
 
 = Download =
 
-The latest snapshot is Snapshot 34 which was released Saturday the 16th of August 2006.
+The latest snapshot is [http://macvim.googlecode.com/files/MacVim-snapshot-34.tbz Snapshot 34] which was released Saturday the 16th of August 2006.  If the download fails, please try the downloads mirror.
