@@ -1,4 +1,5 @@
 #summary Link to latest snapshot with change log
+#labels Featured
 
 = Regarding snapshots =
 
