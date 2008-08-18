@@ -90,6 +90,8 @@ As an optional extra you might want to configure the `git-svn` command (this is 
 
 =Running several versions of !MacVim simultaneously=
 
+_As of snapshot 34 it is possible to run two or more instances of !MacVim simultaneously, but an error message will be logged for each instance that is started after the first one.  You should only ever run several instances when you are testing different versions._
+
 If you have one version of !MacVim in e.g. `/Applications` and then build another with Xcode and try to run it, there will be trouble (since both are listening to the same named port for new Vim connections).  To get around this do the following (assuming you have installed !MacVim in the Applications folder):
   * Open a Finder window on `/Applications`
   * Rename `MacVim` to `MacVim-devel`
