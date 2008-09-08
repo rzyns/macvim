@@ -26,6 +26,13 @@ Add "set imd" to your "~/.vimrc" file (see ":h 'imd'" for more information).
 Add "set go-=T" to "~/.gvimrc" (see ":h 'go'" for more information).
 
 
+=== Using !MacVim with Xcode ===
+
+In Xcode, open Preferences and click the "File Types" tab, then expand "file -> text".  Under the "text" item there is an entry called "sourcecode"; click the second column (Preferred Editor) of this entry and choose "External Editor -> Other".  Navigate to !MacVim.app in the dialog that pops up.
+
+The "external editor" support in Xcode is very limited.  Basically all the above change does is to open source code files in !MacVim.  You can also double click on build errors to open !MacVim on the line where the error was reported.
+
+
 === How to get !MacVim to look like the screenshot ===
 
 Add the following lines to "~/.gvimrc":
