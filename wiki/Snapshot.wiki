@@ -15,10 +15,7 @@ _Older change logs can be viewed by inspecting the various tags at the [http://r
 
 == Snapshot 35 ==
 
-With this snapshot I have focused on making MacVim faster, fixing bugs,
-and updating the documentation.  As a result MacVim now feels snappier,
-flickers less, takes less time to startup from Terminal, and in some
-cases there are tremendous speed increases.
+With this snapshot I have focused on making !MacVim faster, fixing bugs, and updating the documentation.  As a result !MacVim now feels snappier, flickers less, takes less time to startup from Terminal, and in some cases there are tremendous speed increases.
 
 Here is a summary of the changes since snapshot 34:
 
