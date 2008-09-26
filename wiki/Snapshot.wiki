@@ -7,11 +7,39 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-The latest version is [http://macvim.googlecode.com/files/MacVim-snapshot-34.tbz Snapshot 34] which was released Saturday the 16th of August 2006.  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+The latest version is [http://macvim.googlecode.com/files/MacVim-snapshot-35.tbz Snapshot 35] which was released Friday the 26th of September 2006.  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+== Snapshot 35 ==
+
+  * Faster startup times
+  * Overall faster drawing
+  * Quicker response to key presses
+  * Fix bug where key presses were ignored when mouse was moved simultaneously
+  * Update ":h macvim" docs
+  * Add mvim:// URL handler support (Nico Weber)
+  * The !VimLeave autocommand works with :maca (see ":h macvim-hints")
+  * Multiple files opened from Finder are sorted
+  * Don't shift new windows downwards if they are vertically maximized
+  * Add option to hide !MacVim when last window closes
+  * The "Save changes" dialog conforms to the Apple HIG (works with Cmd-D)
+  * Fix problems with 'fullscreen' and :mksession (Nico Weber)
+  * Cmd-e copies selection to Find Pasteboard without searching
+  * Fix bug with blurry text in full-screen with ATSUI (Jjgod Jiang)
+  * Cmd-. can be used to interrupt Vim (and to exit insert mode)
+  * Add "New Document Here" system service (Ron Olson)
+  * Simplify system services menu (honors the "Open files..." pref)
+  * Full-screen background color is updated immediately when 'fuopt' changes
+  * Cursor no longer escapes the command line on Cmd-=/Cmd--
+  * Add Input Manager support to ATSUI renderer (Kaoru Yoshida)
+  * Use latest Vim source code and runtime files
+  * Minor bug fixes
+
+
+== Snapshot 34 ==
 
 Vim 7.2, file-open options, Quickstart, ...
 
