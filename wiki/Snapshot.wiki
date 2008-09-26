@@ -15,6 +15,13 @@ _Older change logs can be viewed by inspecting the various tags at the [http://r
 
 == Snapshot 35 ==
 
+With this snapshot I have focused on making MacVim faster, fixing bugs,
+and updating the documentation.  As a result MacVim now feels snappier,
+flickers less, takes less time to startup from Terminal, and in some
+cases there are tremendous speed increases.
+
+Here is a summary of the changes since snapshot 34:
+
   * Faster startup times
   * Overall faster drawing
   * Quicker response to key presses
@@ -40,8 +47,6 @@ _Older change logs can be viewed by inspecting the various tags at the [http://r
 
 
 == Snapshot 34 ==
-
-Vim 7.2, file-open options, Quickstart, ...
 
 This snapshot is based on the recently released Vim 7.2 and it contains
 some new features and bug fixes.  Here's a partial list:
