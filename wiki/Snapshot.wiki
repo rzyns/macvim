@@ -21,7 +21,7 @@ This snapshot fixes a problem with dropped characters that was introduced with s
   * Fixed memory leak (Jonathon Mah)
   * Tool tips for truncated tab labels (Jonathon Mah)
   * Support drag and drop on tabs and on tabline (Jonathon Mah)
-  * Modifier key can be used as control (useful for turning Caps Lock into Esc, see ":h macvim-esc")
+  * Modifier key can be used as Esc (useful for turning Caps Lock into Esc, see ":h macvim-esc")
   * Added "Find & Replace" dialog box (Cmd-f)
 
 
