@@ -13,6 +13,19 @@ The latest version is [http://macvim.googlecode.com/files/MacVim-snapshot-36.tbz
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
 
+== Snapshot 36 ==
+
+This snapshot fixes a problem with dropped characters that was introduced with snapshot 35.  Other changes since snapshot 35:
+
+  * More help file updates
+  * Fixed memory leak (Jonathon Mah)
+  * Tool tips for truncated tab labels (Jonathon Mah)
+  * Support drag and drop on tabs and on tabline (Jonathon Mah)
+  * Modifier key can be used as control (useful for turning Caps Lock into Esc, see ":h macvim-esc")
+  * Added "Find & Replace" dialog box (Cmd-f)
+
+
+
 == Snapshot 35 ==
 
 With this snapshot I have focused on making !MacVim faster, fixing bugs, and updating the documentation.  As a result !MacVim now feels snappier, flickers less, takes less time to startup from Terminal, and in some cases there are tremendous speed increases.
