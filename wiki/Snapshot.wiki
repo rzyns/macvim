@@ -7,7 +7,7 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-The latest version is [http://macvim.googlecode.com/files/MacVim-snapshot-35.tbz Snapshot 35] which was released Friday the 26th of September 2008.  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+The latest version is [http://macvim.googlecode.com/files/MacVim-snapshot-36.tbz Snapshot 36] which was released Saturday the 4th of October 2008.  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
