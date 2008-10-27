@@ -26,6 +26,19 @@ Add "set imd" to your "~/.vimrc" file (see ":h 'imd'" for more information).
 Add "set go-=T" to "~/.gvimrc" (see ":h 'go'" for more information).
 
 
+=== How to use LaTeX with !MacVim ===
+
+These instructions are the bare minimum to get you started with the LaTeX-Suite ([http://www.google.com/search?q=latex+site:groups.google.com/group/vim_mac search the vim_mac archives] for more information):
+
+  # Make sure you have created a folder called `.vim` in your home directory first.  To create this folder, open up Terminal.app and type `mkdir ~/.vim` (the character before the "/" is a tilde "~", not a dash "-").
+  # Download the latest version of the Vim [http://vim-latex.sourceforge.net LaTeX-suite] as a zip file and save it to the `~/.vim` folder.  _Hint:_ If you are using Safari, right-click the download link and choose "Download Linked File As...", press ⌘⇧G and type `~/.vim` and hit enter, and then click "Save" to save the archive in the `~/.vim` folder without having Safari extract it automatically.
+  # Extract the archive by opening Terminal.app and typing `cd ~/.vim` and then `unzip latex...` (hit Tab after typing "latex" and the rest of the archive's filename will be filled in for you).  You can delete the archive afterwards (`rm latex...`).
+  # Make sure your `~/.vimrc` file contains the two lines `filetype plugin indent on` and `let g:Tex_ViewRule_pdf = 'Preview'` (create a new `.vimrc` file if it does not already exist).
+  # Open !MacVim and type `:helptags ~/.vim/doc`
+
+_Note:_ When you start editing a new file you may have to enter `:set ft=tex` before all the plugin mappings are loaded (when you open an existing file the `filetype ...` line you added to `.vimrc` will take care of that for you).
+
+
 === Using !MacVim with Xcode ===
 
 In Xcode, open Preferences and click the "File Types" tab, then expand "file -> text".  Under the "text" item there is an entry called "sourcecode"; click the second column (Preferred Editor) of this entry and choose "External Editor -> Other".  Navigate to !MacVim.app in the dialog that pops up.
