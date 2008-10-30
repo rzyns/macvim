@@ -7,6 +7,15 @@ Configuration settings for Vim (and hence !MacVim) are set in the files "~/.vimr
 
 Add "set lines=35" and/or "set columns=100" to your "~/.gvimrc" file to make new windows open 35 lines high and/or 100 columns wide (see ":h 'lines'", ":h 'columns'").
 
+=== How to make a window fill the screen when zooming ===
+
+Hold down ⌘ when clicking the zoom button to do it once off, or see
+{{{
+:h macvim-user-defaults
+:h macvim-user-defaults | /zoom
+}}}
+for how to set it as a preference.
+
 === Monaco 10pt is jagged even though 'antialias' is set ===
 
 Open up Terminal and type
