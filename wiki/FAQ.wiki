@@ -5,14 +5,11 @@ Configuration settings for Vim (and hence !MacVim) are set in the files "~/.vimr
 
 === How to change the default size of new windows ===
 
-Add "set lines=35" and/or "set columns=100" to your "~/.gvimrc" file to make new windows open 35 lines high and/or 100 columns wide (see ":h 'lines'", ":h 'columns'").
+Add `set lines=35` and/or `set columns=100` to your "~/.gvimrc" file to make new windows open 35 lines high and/or 100 columns wide (see `:h 'lines'`, `:h 'columns'`).
 
 === How to make a window fill the screen when zooming ===
 
-This is covered in the help.  See
-{{{
-:h macvim-hints | /zoom
-}}}
+This is covered in the help.  See `:h macvim-hints | /zoom`.
 
 === Monaco 10pt is jagged even though 'antialias' is set ===
 
@@ -25,12 +22,12 @@ and restart !MacVim.
 
 === The keyboard layout switches on its own when I change mode ===
 
-Add "set imd" to your "~/.vimrc" file (see ":h 'imd'" for more information).
+Add `set imd` to your "~/.vimrc" file (see `:h 'imd'` for more information).
 
 
 === The toolbar does not stay hidden when restarting !MacVim ===
 
-Add "set go-=T" to "~/.gvimrc" (see ":h 'go'" for more information).
+Add `set go-=T` to "~/.gvimrc" (see `:h 'go'` for more information).
 
 
 === How to use LaTeX with !MacVim ===
