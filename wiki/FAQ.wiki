@@ -9,12 +9,10 @@ Add "set lines=35" and/or "set columns=100" to your "~/.gvimrc" file to make new
 
 === How to make a window fill the screen when zooming ===
 
-Hold down ⌘ when clicking the zoom button to do it once off, or see
+This is covered in the help.  See
 {{{
-:h macvim-user-defaults
-:h macvim-user-defaults | /zoom
+:h macvim-hints | /zoom
 }}}
-for how to set it as a preference.
 
 === Monaco 10pt is jagged even though 'antialias' is set ===
 
