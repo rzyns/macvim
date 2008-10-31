@@ -1,6 +1,8 @@
 #summary Frequently Asked Questions
 #labels Featured
 
+*IMPORTANT!* Always consult `:h macvim` (and `:help`) first!
+
 Configuration settings for Vim (and hence !MacVim) are set in the files "~/.vimrc" and "~/.gvimrc" (see ":h vimrc-intro").  If these files don't already exist you simply have to create them (and make sure to save them in your home directory, i.e. "~/").
 
 === How to change the default size of new windows ===
