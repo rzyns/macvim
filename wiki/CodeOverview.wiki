@@ -1,4 +1,5 @@
 #summary Overview of the MacVim source code
+#labels Deprecated
 
 _Note that this document is quite out of date, check the README file that comes with the source code (inside the `src/MacVim` folder) for more up to date information._
 
