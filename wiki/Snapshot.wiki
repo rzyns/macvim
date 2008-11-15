@@ -7,11 +7,35 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-36.tbz Download snapshot 36] (released Saturday the 4th of October 2008).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-37.tbz Download snapshot 37] (released Saturday the 15th of November 2008).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+== Snapshot 37 ==
+
+Changes since snapshot 36:
+  * Fix bug where Vim would crash when resizing a window with double-width characters
+  * Add option 'macmeta' to use "alt/option" as meta key to allow bindings to <M-..> (see ":h 'macmeta')
+  * Add basic support for !AppleScript (Jason Foreman).  E.g. to zoom a window:
+{{{
+      tell application MacVim
+          set zoomed of first window to true
+      end tell
+}}}
+  * Fix various bugs relating to initial window positioning 
+  * Keep window is visible on ":set lines=..." and "set columns=..."
+  * Inserting text from "Special Characters" palette works again
+  * Remove the functionality to use a modifier key as Esc (use the PCKeyboardHack app instead, see ":h macvim-hints | /esc")
+  * More help on keyboard shortcuts (":h macvim-shortcuts") and the mvim script (see ":h mvim")
+  * Speed up live resize
+  * Support mvim script symlinks to [m|g]ex and rmvim (see ":h mvim")
+  * Tentative support for receiving input from system services (Try this: insert "2+3", select the text, then hit Cmd-Shift-8.  Result: "2+3" is replaced with "5".  Sometimes it seems you have to choose "!MacVim->Services->Script Editor->Get Result of !AppleScript" instead of pressing Cmd-Shift-8 for this to work.)
+  * No more Vim zombie processes
+  * Add "Reload"/"Ignore All" buttons to the file changed dialog
+  * (Almost) Latest runtime files, and Vim patches
+
 
 == Snapshot 36 ==
 
