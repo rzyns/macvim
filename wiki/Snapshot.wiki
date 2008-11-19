@@ -9,6 +9,8 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 [http://macvim.googlecode.com/files/MacVim-snapshot-37.tbz Download snapshot 37] (released Saturday the 15th of November 2008).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
+_Note:_ Snapshot 37 has a problem if you try using `system()` when the "Login shell" option is enabled.  A new snapshot which addresses this issue will be released soon.  The automatic updating will not ask you to download snapshot 37.
+
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
