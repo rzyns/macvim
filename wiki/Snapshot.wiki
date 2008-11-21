@@ -7,13 +7,21 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-37.tbz Download snapshot 37] (released Saturday the 15th of November 2008).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
-
-_Note:_ Snapshot 37 has a problem if you try using `system()` when the "Login shell" option is enabled.  A new snapshot which addresses this issue will be released soon.  The automatic updating will not ask you to download snapshot 37.
+[http://macvim.googlecode.com/files/MacVim-snapshot-38.tbz Download snapshot 38] (released Friday the 21st of November 2008).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+== Snapshot 38 ==
+
+Snapshot 37 had a problem with the "Login shell" option, so I've built a new snapshot containing a fix (by Ben Schmidt).
+
+Changes since snapshot 37:
+  * Dropping multiple files on a window no longer results in an error
+  * Fix "Login shell" problems (Ben Schmidt)
+  * Exit Vim process if connection becomes invalid -- this should avoid the system log filling up with error messages, but please let me know when it happens (and send me the output from Console.app)
+
 
 == Snapshot 37 ==
 
