@@ -7,11 +7,19 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-38.tbz Download snapshot 38] (released Friday the 21st of November 2008).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-39.tbz Download snapshot 39] (released Sunday the 23rd of November 2008).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+== Snapshot 39 ==
+
+Changes since snapshot 38:
+  * Avoid "Stray process..." warning messages (Ben Schmidt)
+  * Add Cmd-BS and Alt-BS insert mode mappings (Nico Weber)
+  * Latest Vim patches and runtime files
+
 
 == Snapshot 38 ==
 
