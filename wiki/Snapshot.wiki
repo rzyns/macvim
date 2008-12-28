@@ -7,11 +7,26 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-39.tbz Download snapshot 39] (released Sunday the 23rd of November 2008).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-40.tbz Download snapshot 40] (released Sunday the 28th of December 2008).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+== Snapshot 40 ==
+
+Changes since snapshot 39:
+
+  * Fix problems with Quickstart "leaking" Vim processes
+  * 'imdisable' now on by default (i.e. IM is disabled by default)
+  * Clipboard support in non-GUI mode (Kent Sibilev)
+  * New document icons, more filetype associations (Nico Weber)
+  * Add support for 'guitabtooltip' (hint: add the line "set gtl=%t gtt=%F" to your .gvimrc to make tabs display the name of the file and have the tooltip display the full path) (Jonathon Mah)
+  * Look for toolbar icons in runtime path (plugins such as TVO now display toolbar icons properly)
+  * Show dialog when clicking to close tab with modified buffers
+  * Update documentation
+  * Latest Vim source code and runtime files
+
 
 == Snapshot 39 ==
 
