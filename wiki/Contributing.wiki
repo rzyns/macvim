@@ -47,7 +47,7 @@ This will make a commit including all modified files (but not newly created file
     cause internal errors in MMTextStorage so when control chars are
     detected, simply draw blanks instead.
 
-(Indentation was added only to make the above more readable.)  The format of a commit message is thus: a line with a concise summary of the commit (required), and a blank line followed by a more verbose description of the commit (optional).  To ensure these messages look good, please make sure each line is not longer than 72 characters (":set tw=72" and "gq" are your friends).
+(Indentation was added only to make the above more readable.)  The format of a commit message is thus: a line with a concise summary of the commit (required), and a blank line followed by a more verbose description of the commit (optional).  To ensure these messages look good, please make sure each line is not longer than 72 characters (hint: add `filetype plugin indent on` to your `.vimrc` and set the environment variable `EDITOR` to `mvim -f`).
 
 
 ==Updating to the latest version==
