@@ -49,6 +49,12 @@ This will make a commit including all modified files (but not newly created file
 
 (Indentation was added only to make the above more readable.)  The format of a commit message is thus: a line with a concise summary of the commit (required), and a blank line followed by a more verbose description of the commit (optional).  To ensure these messages look good, please make sure each line is not longer than 72 characters (hint: add `filetype plugin indent on` to your `.vimrc` and set the environment variable `EDITOR` to `mvim -f`).
 
+If you made a mistake while typing the commit message you can easily change it by entering
+{{{
+git-commit --amend
+}}}
+which will bring up your old commit message so that you may modify it.  (This method not only lets you modify a bad commit message; you can also make modifications to the source code, then type `git-commit -a --amend` to rewrite your last commit to include your modifications.)
+
 
 ==Updating to the latest version==
 
