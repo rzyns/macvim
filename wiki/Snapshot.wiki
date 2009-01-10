@@ -7,11 +7,28 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-40.tbz Download snapshot 40] (released Sunday the 28th of December 2008).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-41.tbz Download snapshot 41] (released Saturday the 10th of January 2009).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+== Snapshot 41 ==
+
+Here's the list of changes since snapshot 40:
+
+  * The menu bar behaves better when using full-screen and switching Spaces (Nico Weber)
+  * Don't switch Spaces when using "mvim" on one Space and a MacVim window is open on another Space
+  * Add user default to toggle the "add tab" button on the tabline (to disable, enter "defaults org.vim.MacVim MMShowAddTabButton 0" in Terminal)
+  * Avoid the "Press ENTER..." prompt when dragging and dropping
+  * Faster startup (and shutdown, but you're not likely to notice that unless you are me ;-)
+  * Automatic updating works again (?)
+  * Possible to interrupt external commands (e.g. you can Ctrl-C during a lenghty :grep now)
+  * The output from external commands is displayed "interactively" (i.e. you don't have to wait for the command to finish before any output is drawn; try ":!ls -l /usr/lib" and compare with snap 40 to see what I mean)
+  * Cmd-. sends SIGINT (so that if a Vim process is stuck you should always be able to interrupt it with Cmd-. even if Ctrl-C doesn't work)
+  * Fix crashing bug: e.g. with snap 40 if you go to the src/ folder of Vim and type ":grep a `*`.c" MacVim would crash
+  * Toggle loading of default font with user default MMLoadDefaultFont
+
 
 == Snapshot 40 ==
 
