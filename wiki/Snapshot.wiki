@@ -18,16 +18,16 @@ _Older change logs can be viewed by inspecting the various tags at the [http://r
 Here's the list of changes since snapshot 40:
 
   * The menu bar behaves better when using full-screen and switching Spaces (Nico Weber)
-  * Don't switch Spaces when using "mvim" on one Space and a MacVim window is open on another Space
-  * Add user default to toggle the "add tab" button on the tabline (to disable, enter "defaults org.vim.MacVim MMShowAddTabButton 0" in Terminal)
+  * Don't switch Spaces when using "mvim" on one Space and a !MacVim window is open on another Space
+  * Add user default to toggle the "add tab" button on the tabline (to disable, enter `defaults org.vim.MacVim MMShowAddTabButton 0` in Terminal)
   * Avoid the "Press ENTER..." prompt when dragging and dropping
   * Faster startup (and shutdown, but you're not likely to notice that unless you are me ;-)
   * Automatic updating works again (?)
   * Possible to interrupt external commands (e.g. you can Ctrl-C during a lenghty :grep now)
-  * The output from external commands is displayed "interactively" (i.e. you don't have to wait for the command to finish before any output is drawn; try ":!ls -l /usr/lib" and compare with snap 40 to see what I mean)
+  * The output from external commands is displayed "interactively" (i.e. you don't have to wait for the command to finish before any output is drawn; try `:!ls -l /usr/lib` and compare with snap 40 to see what I mean)
   * Cmd-. sends SIGINT (so that if a Vim process is stuck you should always be able to interrupt it with Cmd-. even if Ctrl-C doesn't work)
-  * Fix crashing bug: e.g. with snap 40 if you go to the src/ folder of Vim and type ":grep a `*`.c" MacVim would crash
-  * Toggle loading of default font with user default MMLoadDefaultFont
+  * Fix crashing bug: e.g. with snap 40 if you go to the src/ folder of Vim and type ":grep a `*`.c" !MacVim would crash
+  * Toggle loading of default font with user default: MMLoadDefaultFont
 
 
 == Snapshot 40 ==
