@@ -18,7 +18,7 @@ _Older change logs can be viewed by inspecting the various tags at the [http://r
 Changes since snapshot 42:
 
   * Do inclusive search when opening files (Jonathon Mah)
-  * Respect layout prefs when doule-clicking an already open file
+  * Respect layout prefs when double-clicking an already open file
   * Fix two minor memory leaks
   * Ctrl-] works on German keyboard layout
   * The .viminfo file is written on Cmd-q
