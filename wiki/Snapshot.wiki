@@ -24,8 +24,7 @@ Changes since snapshot 42:
   * The .viminfo file is written on Cmd-q
   * New 16x16 icons (Nico Weber)
   * Untitled window again opens on reopen event if requested in prefs
-  * Fork earlier; fixes bug with 'autochdir', faster startup, "f" no longer
-    supported in 'guioptions'
+  * Fork earlier; fixes bug with 'autochdir', faster startup, "f" no longer supported in 'guioptions'
   * Some other minor bug fixes
   * Use latest runtime files and Vim patches
 
