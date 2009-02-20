@@ -7,11 +7,29 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-42.tbz Download snapshot 42] (released Monday the 12th of January 2009).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-43.tbz Download snapshot 43] (released Friday the 20th of February 2009).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+== Snapshot 43 ==
+
+Changes since snapshot 42:
+
+  * Do inclusive search when opening files (Jonathon Mah)
+  * Respect layout prefs when doule-clicking an already open file
+  * Fix two minor memory leaks
+  * Ctrl-] works on German keyboard layout
+  * The .viminfo file is written on Cmd-q
+  * New 16x16 icons (Nico Weber)
+  * Untitled window again opens on reopen event if requested in prefs
+  * Fork earlier; fixes bug with 'autochdir', faster startup, "f" no longer
+    supported in 'guioptions'
+  * Some other minor bug fixes
+  * Use latest runtime files and Vim patches
+
+
 
 == Snapshot 42 ==
 
