@@ -63,7 +63,16 @@ localhost:~/vim7 user$ git pull
 
 See the wiki page on [Contributing].
 
+
 =Installing Git=
+
+==Using the installer==
+
+A prebuilt binary of Git for Mac OS X can be found [http://code.google.com/p/git-osx-installer/ here].
+
+==Using !MacPorts==
+
+Note! If you do not already have !MacPorts installed then be warned that installing both !MacPorts and Git will take a _long_ time.
 
 If you already have !MacPorts installed, then you can install Git by opening a Terminal window and
 typing
@@ -72,7 +81,7 @@ localhost:~ user$ sudo port install git-core +svn
 }}}
 (The `+svn` flag is not strictly necessary, but if you might ever need to use the `git-svn` command in the future it is best to include it.)
 
-If you do not already have !MacPorts installed, be warned that installing both !MacPorts and Git will take a _long_ time. A faster alternative is to install Git directly from the sources, but it requires that you know what you are doing.
+==From the Git source code==
 
 To install Git from the source code archive:
   * download the latest Git source code archive from http://git.or.cz
