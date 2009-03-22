@@ -131,6 +131,7 @@ The app bundle can be found in the folder `~/vim7/src/MacVim/build/Universal`.
 
 =Random notes=
 
+  * The document icons require the Envy Code R font to be installed in `src/MacVim/icons`.  This font is fetched automatically the first time you build !MacVim.  You can also download it manually from `http://download.damieng.com/latest/EnvyCodeR`
   * At the moment the Vim runtime files are not updated inside the app bundle if they are modified.  If you modify any runtime files, then you have to clean the !MacVim project and build it again.
   * To build with Ruby support on OS X 10.4 (Tiger), you may get an error from `configure` saying that the Ruby header files cannot be found.  If you run into this problem, open up Terminal and type
 {{{
