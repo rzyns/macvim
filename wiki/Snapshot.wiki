@@ -7,11 +7,24 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-43.tbz Download snapshot 43] (released Friday the 20th of February 2009).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-44.tbz Download snapshot 44] (released Sunday the 29th of March 2009).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+== Snapshot 44 ==
+
+Changes since snapshot 43:
+
+  * The color table had many erroneous entries which have been corrected (Zvezdan Petkovic)
+  * Ctrl+tab works again
+  * Tab labels only show file tail by default to make them more legible (reset to default by adding "set guitablabel&" to .gvimrc)
+  * The number of columns does not change on ":set go+=rT"
+  * Fixed problems with view not maximizing when entering full-screen and the Dock was visible
+  * Fix various problems related to having windows on a screen that got unplugged (fixes Issue 162)
+  * Latest source code version and runtime files (e.g. the Python syntax file is fixed, fixes Issue 160)
+
 
 == Snapshot 43 ==
 
