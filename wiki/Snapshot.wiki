@@ -7,11 +7,22 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-44.tbz Download snapshot 44] (released Sunday the 29th of March 2009).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-45.tbz Download snapshot 45] (released Monday the 13th of April 2009).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+== Snapshot 45 ==
+
+Changes since snapshot 44:
+
+  * The toolbar is not hidden by default again (if you prefer having the toolbar hidden, then add the line "set go-=T" to your ~/.gvimrc file)
+  * The ATSUI renderer honors the 'guisp' highlighting color
+  * Fix the forever bouncing Dock icon bug (Kazuki Sakamoto)
+  * Add the "Show Hidden Files" checkbox button to the Save dialog whenever the file browser is expanded
+  * Frontend refactoring
+
 
 == Snapshot 44 ==
 
