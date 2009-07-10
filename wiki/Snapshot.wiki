@@ -25,7 +25,7 @@ Changes since snapshot 45:
   * Update the help file
   * 'guifontwide' is updated on Cmd-+/Cmd--
   * The titles of the next/previous tab menu items now match other apps
-  * Add NetBeans support (Kazuki Sakamoto)
+  * Add !NetBeans support (Kazuki Sakamoto)
   * Add simple logging facility
   * Update to latest Vim patches and runtime files
 
