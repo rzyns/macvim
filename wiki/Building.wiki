@@ -97,6 +97,45 @@ As an optional extra you might want to configure the `git-svn` command (this is 
 
 
 
+=Using the ASL logging system=
+
+There are four different filters controlling what gets logged or not
+  * The ASL database filter
+  * The ASL master filter
+  * The ASL per-process filter
+  * The local (!MacVim-) filter
+By default Debug and Info level messages are blocked.  If you are developing you'll likely want to see all logs from time to time.  In order to do this you must first change the local filter and this is done by setting the user default !MMLogLevel.  For example
+{{{
+localhost:~ user$ defaults write org.vim.MacVim MMLogLevel 7
+}}}
+will enable all log messages past the local filter.  ASL will still block them however since the database filter blocks Debug and Info level messages as well.  To change this use the `syslog` command:
+{{{
+localhost:~ user$ sudo syslog -c syslogd -d
+}}}
+Now you'll be able to see all logs from !MacVim in Console.app, or by using `syslog`:
+{{{
+localhost:~ user$ syslog -w | grep Vim
+}}}
+When you are done debugging you can reset the database filter as follows:
+{{{
+localhost:~ user$ sudo syslog -c syslogd off
+}}}
+
+It is also possible to have !MacVim log to stderr as follows:
+{{{
+localhost:~ user$ defaults write org.vim.MacVim MMLogToStdErr 1
+}}}
+This requires a restart.  To disable substitute the 1 for a 0.  Note that this does not require that you change the database filter as described above.
+
+A tip: instead of using `defaults` to change MMLogLevel and MMLogToStdErr you can pass these as command line options to the `MacVim` binary (inside the app bundle) as follows:
+{{{
+localhost:~ user$ ./MacVim.app/Contents/MacOS/MacVim -MMLogLevel 7 -MMLogToStdErr 1
+}}}
+
+
+
+
+
 =Running several versions of !MacVim simultaneously=
 
 _As of snapshot 34 it is possible to run two or more instances of !MacVim simultaneously, but an error message will be logged for each instance that is started after the first one.  Running multiple instances is not recommended (but is of course unavoidable if you are working on !MacVim).  Modifying the CFBundleIdentifier as explained below is a way to get around the error message being logged, but is no longer necessary._
