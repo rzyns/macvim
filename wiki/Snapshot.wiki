@@ -7,11 +7,28 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-45.tbz Download snapshot 45] (released Monday the 13th of April 2009).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-46.tbz Download snapshot 46] (released Saturday the 11th of July 2009).  It is a universal binary which runs on Mac OS X 10.4 or later.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+
+== Snapshot 46 ==
+
+Changes since snapshot 45:
+
+  - Markdown (Nico Weber) and reStructuredText (Travis Jeffery) are supported file types
+  - The forever bouncing Dock icon bug should now really really be fixed (Kazuki Sakamoto)
+  - Fixed bug when file name contained decomposed UTF8 characters
+  - Quick Look should work for most/all supported filetypes now (although the preview is simple text and is not syntax highlighted)
+  - Update the help file
+  - 'guifontwide' is updated on Cmd-+/Cmd--
+  - The titles of the next/previous tab menu items now match other apps
+  - Add NetBeans support (Kazuki Sakamoto)
+  - Add simple logging facility
+  - Update to latest Vim patches and runtime files
+
 
 == Snapshot 45 ==
 
