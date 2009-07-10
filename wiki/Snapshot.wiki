@@ -18,16 +18,16 @@ _Older change logs can be viewed by inspecting the various tags at the [http://r
 
 Changes since snapshot 45:
 
-  - Markdown (Nico Weber) and reStructuredText (Travis Jeffery) are supported file types
-  - The forever bouncing Dock icon bug should now really really be fixed (Kazuki Sakamoto)
-  - Fixed bug when file name contained decomposed UTF8 characters
-  - Quick Look should work for most/all supported filetypes now (although the preview is simple text and is not syntax highlighted)
-  - Update the help file
-  - 'guifontwide' is updated on Cmd-+/Cmd--
-  - The titles of the next/previous tab menu items now match other apps
-  - Add NetBeans support (Kazuki Sakamoto)
-  - Add simple logging facility
-  - Update to latest Vim patches and runtime files
+  * Markdown (Nico Weber) and reStructuredText (Travis Jeffery) are supported file types
+  * The forever bouncing Dock icon bug should now really really be fixed (Kazuki Sakamoto)
+  * Fixed bug when file name contained decomposed UTF8 characters
+  * Quick Look should work for most/all supported filetypes now (although the preview is simple text and is not syntax highlighted)
+  * Update the help file
+  * 'guifontwide' is updated on Cmd-+/Cmd--
+  * The titles of the next/previous tab menu items now match other apps
+  * Add NetBeans support (Kazuki Sakamoto)
+  * Add simple logging facility
+  * Update to latest Vim patches and runtime files
 
 
 == Snapshot 45 ==
