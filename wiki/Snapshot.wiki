@@ -27,7 +27,7 @@ Changes since snapshot 45 (snapshot 46 is more or less identical to 47, except i
   * The titles of the next/previous tab menu items now match other apps
   * Add !NetBeans support (Kazuki Sakamoto)
   * Add simple logging facility
-  * Fix bug where MacVim would crash when dialog sheets were used
+  * Fix bug where !MacVim would crash when dialog sheets were used
   * Update to latest Vim patches and runtime files
 
 
