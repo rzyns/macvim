@@ -7,11 +7,26 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-47.tbz Download snapshot 47] (released Thursday the 16th of July 2009).  It is a universal binary which runs on Mac OS X 10.4 or 10.5.   _Mac OS X 10.6 ("Snow Leopard") is not supported until it is publicly available and I get my own copy to test with._  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-47.tbz Download snapshot 48] (released Saturday the 15th of August 2009).  It is a universal binary which runs on Mac OS X 10.4 or 10.5.   _Mac OS X 10.6 ("Snow Leopard") is not supported until it is publicly available and I get my own copy to test with._  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+
+== Snapshot 48 ==
+
+Changes since snapshot 48:
+
+  * ATSUI clips text to display cell to avoid "bleeding"
+  * The pwd is set properly when dropping a folder on the Dock
+  * Add Vimball (.vba) as a supported filetype
+  * Refactored input code (e.g. can now bind to numeric keypad)
+  * Improved IM support (separate keyboard layouts in normal/insert modes using the 'noimd' option, see ":h macvim-international")
+  * Draw marked text inline (listed as +xim in ":ver")
+  * Add user default MMUseInlineIm (use to disable above feature)
+  * Update Vim source and runtime files
+
 
 
 == Snapshot 47 ==
