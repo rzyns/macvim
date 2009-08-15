@@ -16,7 +16,7 @@ _Older change logs can be viewed by inspecting the various tags at the [http://r
 
 == Snapshot 48 ==
 
-_Note: On Tiger (10.4) arrow and function keys are broken in this snapshot (but not on Leopard [10.5])._
+_Note: On Tiger (10.4) arrow and function keys are broken in this snapshot (but not on Leopard (10.5))._
 
 Changes since snapshot 48:
 
