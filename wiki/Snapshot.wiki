@@ -7,11 +7,16 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-48.tbz Download snapshot 48] (released Saturday the 15th of August 2009).  It is a universal binary which runs on Mac OS X 10.4 or 10.5.   _Mac OS X 10.6 ("Snow Leopard") is not supported until it is publicly available and I get my own copy to test with._  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-49.tbz Download snapshot 49] (released Sunday the 16th of August 2009).  It is a universal binary which runs on Mac OS X 10.4 or 10.5.   _Mac OS X 10.6 ("Snow Leopard") is not supported until it is publicly available and I get my own copy to test with._  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
 
 = Change log =
 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
+
+
+== Snapshot 49 ==
+
+This release fixes a bug which caused Ctrl-@, Ctrl-h, Ctrl-o to fail.  It also includes a fix for the arrow and function key bug that only affected 10.4.
 
 
 == Snapshot 48 ==
