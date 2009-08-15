@@ -18,7 +18,7 @@ _Older change logs can be viewed by inspecting the various tags at the [http://r
 
 _Note: On Mac OS X 10.4 arrow and function keys are broken in this snapshot.  This bug does not affect Mac OS X 10.5._
 
-Changes since snapshot 48:
+Changes since snapshot 47:
 
   * ATSUI clips text to display cell to avoid "bleeding"
   * The pwd is set properly when dropping a folder on the Dock
