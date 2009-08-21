@@ -44,6 +44,23 @@ If it is not a problem with the GUI itself, then you can see if the problem also
 Download the latest snapshot build of !MacVim and see if the problem is still there.  
 
 
+=== Reset the preferences ===
+
+Reset the preferences and restart !MacVim.
+
+Step-by-step instructions:
+
+1. Open up Terminal and type (read step 3 first!):
+
+{{{
+$ defaults delete org.vim.MacVim
+}}}
+
+2. Restart !MacVim and see if the problem persists (since the prefs were deleted !MacVim will ask about auto-updating again).
+
+3. Step 1 cannot be undone, so you'll have to open up the preferences and restore them manually.
+
+
 === Ask for help ===
 
 If you've tried all the above and the problem still persists, then post to the `vim_mac` mailing list asking for help.  Make sure you state that you have read this page in your post or the first reply will most likely be to read this page!
