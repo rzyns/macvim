@@ -1,4 +1,4 @@
-#summary Reporting bugs
+#summary Steps to take before reporting a bug
 
 Before reporting a bug, make sure you go through the following steps:
 
