@@ -7,7 +7,7 @@ Before reporting a bug, make sure you go through the following steps:
 
 Quit !MacVim, temporarily rename your rc-files and `.vim` directory, then restart !MacVim and see if the problem persists.  If it doesn't then the problem is in some configuration file or a plugin.
 
-(One way to locate the problem is to comment out all lines in the config files and uncomment one line at a time, restarting !MacVim in between to see if the problem reappeared.)
+(If the problem is in the config files then you can find it by commenting out all lines in the config files and uncommenting one line at a time, restarting !MacVim in between to see if the problem reappeared.)
 
 Step-by-step instructions:
 
