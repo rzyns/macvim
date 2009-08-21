@@ -1,0 +1,67 @@
+#summary Reporting bugs
+
+Before reporting a bug, make sure you go through the following steps:
+
+=== Ensure that configuration files are not the cause ===
+
+Quit !MacVim, temporarily rename your rc-files and .vim directory, then restart !MacVim and see if the problem persists.  If it doesn't then the problem is in some configuration file.  One way to locate the problem is to comment out all lines in the config files and uncomment one line at a time, restarting !MacVim in between to see if the problem reappeared.
+
+Step-by-step instructions:
+
+1. Open Terminal and type:
+
+{{{
+$ cd ~
+$ mv .vimrc old.vimrc
+$ mv .gvimrc old.gvimrc
+}}}
+
+(If you don't have one of the files `.vimrc`, `.gvimrc` then the `mv` command will report an error which you can safely ignore.)
+
+2. Restart !MacVim and see if the problem persists.
+
+3. To restore your config files, open Terminal and type:
+
+{{{
+$ cd ~
+$ mv old.vimrc .vimrc
+$ mv old.gvimrc .gvimrc
+}}}
+
+
+=== Ensure that a plugin is not causing the problem ===
+
+Rename the `.vim` folder and restart !MacVim.  If the problem goes away then it is most likely a plugin that is causing it.
+
+Step-by-step instructions:
+
+1. Open Terminal and type:
+
+{{{
+$ mv .vim old.vim
+}}}
+
+(If you don't have a `.vim` folder then the `mv` command will report an error.  In this case you don't have any plugins so there is nothing to test.)
+
+2. Restart !MacVim and see if the problem persists.
+
+3. Restore the `.vim` folder by typing the following command in Terminal:
+
+{{{
+$ mv old.vim .vim
+}}}
+
+
+=== Test the built-in version of Vim ===
+
+If it is not a problem with the GUI itself, then you can see if the problem also appears in the version of Vim that ships with Mac OS X.  To do so, simply open up Terminal and type `vim` and try to reproduce the problem.  If you _can_ reproduce the problem this way then it is not a bug in !MacVim.  Try asking for help on the `vim_use` mailing list.
+
+
+=== Try a newer version of !MacVim ===
+
+Download the latest snapshot build of MacVim and see if the problem is still there.  
+
+
+=== Ask for help ===
+
+If you've tried all the above and the problem still persists, then post to the `vim_mac` mailing list asking for help.  Make sure you state that you have read this page in your post or the first reply will most likely be to read this page!
