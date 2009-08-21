@@ -59,7 +59,7 @@ If it is not a problem with the GUI itself, then you can see if the problem also
 
 === Try a newer version of !MacVim ===
 
-Download the latest snapshot build of MacVim and see if the problem is still there.  
+Download the latest snapshot build of !MacVim and see if the problem is still there.  
 
 
 === Ask for help ===
