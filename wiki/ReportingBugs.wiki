@@ -1,4 +1,5 @@
 #summary Steps to take before reporting a bug
+#labels Featured
 
 Before reporting a bug, make sure you go through the following steps:
 
