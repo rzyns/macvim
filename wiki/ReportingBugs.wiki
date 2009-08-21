@@ -29,7 +29,7 @@ $ mv old.gvimrc .gvimrc
 }}}
 
 
-=== Ensure that a plugin is not causing the problem ===
+=== Ensure that a plugin is not the cause ===
 
 Rename the `.vim` folder and restart !MacVim.  If the problem goes away then it is most likely a plugin that is causing it.
 
