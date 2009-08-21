@@ -5,7 +5,9 @@ Before reporting a bug, make sure you go through the following steps:
 
 === Ensure that configuration files are not the cause ===
 
-Quit !MacVim, temporarily rename your rc-files and .vim directory, then restart !MacVim and see if the problem persists.  If it doesn't then the problem is in some configuration file.  One way to locate the problem is to comment out all lines in the config files and uncomment one line at a time, restarting !MacVim in between to see if the problem reappeared.
+Quit !MacVim, temporarily rename your rc-files and `.vim` directory, then restart !MacVim and see if the problem persists.  If it doesn't then the problem is in some configuration file or a plugin.
+
+(One way to locate the problem is to comment out all lines in the config files and uncomment one line at a time, restarting !MacVim in between to see if the problem reappeared.)
 
 Step-by-step instructions:
 
@@ -15,9 +17,10 @@ Step-by-step instructions:
 $ cd ~
 $ mv .vimrc old.vimrc
 $ mv .gvimrc old.gvimrc
+$ mv .vim old.vim
 }}}
 
-(If you don't have one of the files `.vimrc`, `.gvimrc` then the `mv` command will report an error which you can safely ignore.)
+(If you don't have one of the files `.vimrc`, `.gvimrc` or the folder `.vim` then the `mv` command will report an error which you can safely ignore.)
 
 2. Restart !MacVim and see if the problem persists.
 
@@ -27,28 +30,6 @@ $ mv .gvimrc old.gvimrc
 $ cd ~
 $ mv old.vimrc .vimrc
 $ mv old.gvimrc .gvimrc
-}}}
-
-
-=== Ensure that a plugin is not the cause ===
-
-Rename the `.vim` folder and restart !MacVim.  If the problem goes away then it is most likely a plugin that is causing it.
-
-Step-by-step instructions:
-
-1. Open Terminal and type:
-
-{{{
-$ mv .vim old.vim
-}}}
-
-(If you don't have a `.vim` folder then the `mv` command will report an error.  In this case you don't have any plugins so there is nothing to test.)
-
-2. Restart !MacVim and see if the problem persists.
-
-3. Restore the `.vim` folder by typing the following command in Terminal:
-
-{{{
 $ mv old.vim .vim
 }}}
 
