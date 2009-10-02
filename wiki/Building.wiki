@@ -7,47 +7,54 @@
 
 If you know what you are doing, then this should be enough to get you going:
   * Clone the !MacVim.git repo: `git clone git://repo.or.cz/MacVim.git vim7`
-  * Configure and build Vim: `cd vim7/src; ./configure --enable-gui=macvim; make`
-  * Build !MacVim.app: `cd MacVim; xcodebuild`
-  * Run: `open build/Release/MacVim.app`
-Make sure you pass `--enable-gui=macvim` to `configure`, else everything will
-build but no windows open when you run the application.
+  * Configure and build Vim: `cd vim7/src; ./configure; make`
+  * Run: `open MacVim/build/Release/MacVim.app`
+The `configure` script takes parameters that enable extra features, see the section on "Enabling extra features" below for more information.
 
 
 ==Downloading and building==
 
 To get the source code you need Git, see below for installation instructions if you have not installed Git already. (Note that it is possible to get the source code without installing Git but it will be much easier to keep your local copy of the source code up to date once you have installed Git.  See the comment at the end of this page on how to download the source code without using Git.)
 
-Once you have Git installed you first have to clone the !MacVim.git repo
+Once you have Git installed you first have to clone the !MacVim.git repo, so open up Terminal and type the following commands:
 {{{
 localhost:~ user$ git clone git://repo.or.cz/MacVim.git vim7
 }}}
 This will create a folder named `vim7` and populate it with all the source code
 needed to build !MacVim (you can choose any name you want instead of `vim7`).
 
-Next, you have to configure Vim to include the !MacVim specific code and build Vim
+Next, you have to configure Vim to include the !MacVim specific code (see the next section on how to enable extra features) and then build it
 {{{
 localhost:~ user$ cd vim7/src
-localhost:~/vim7/src user$ ./configure --enable-gui=macvim
+localhost:~/vim7/src user$ ./configure
 localhost:~/vim7/src user$ make
 }}}
-Be very careful when typing that second line!  If you misspell the parameters to
-configure then everything will compile but !MacVim won't open any windows when
-you start it.  After `make` finishes you should have a binary named `Vim` in
-the `vim7/src` folder.
-
-_Optional:_ If you want to build !MacVim with custom features, then you need to pass the appropriate flag to the `configure` script.  To see what options are available, type `./configure --help` (ensure that the working directory is `~/vim7/src` first).  For example, to compile !MacVim with Perl support substitute the second line above with `./configure --enable-gui=macvim --enable-perlinterp`.
-
-The final step is to build the !MacVim application.
+After `make` finishes you can find !MacVim.app in the `MacVim/build/Release/` folder; try to run it by typing
 {{{
-localhost:~/vim7/src user$ cd MacVim
-localhost:~/vim7/src/MacVim user$ xcodebuild
+localhost:~/vim7/src user$ open MacVim/build/Release/MacVim.app
 }}}
-That's it!  !MacVim.app is in the `build/Release` folder, try to run it by
-typing
+
+Once you are satisfied with the build, simply drag and drop !MacVim.app into the `/Applications` folder (this is the preferred location, but it can be run from any folder).
+
+
+==Enabling extra features==
+
+These are the parameters to `configure` you are most likely to want to enable:
+
+  * All standard features: `--with-features=huge`
+  * Cscope support: `--enable-cscope`
+  * Python interpreter: `--enable-pythoninterp`
+  * Ruby interpreter: `--enable-rubyinterp`
+  * Perl interpreter: `--enable-perlinterp`
+  * Universal binary: `--with-macarchs=ARCHS` (`ARCHS=x86_64,i386,ppc,..`, one or more items in quotation mark separated by spaces)
+  * Mac OS X SDK version: `--with-macsdk=VER` (`VER=10.4,10.5,10.6,..`)
+
+As an example, say you are on OS X 10.6 and want to build a 32 bit binary (64 bit is the default on 10.6) with the "usual" features, and Python support.  Then call `configure` like this:
 {{{
-localhost:~/vim7/src/MacVim user$ open build/Release/MacVim.app
+localhost:~ user$ ./configure --with-macarchs=i386 --with-features=huge --enable-pythoninterp
 }}}
+
+To see the list of all parameters, type `./configure --help` (note that not all parameters in that list apply to Mac OS X).
 
 
 ==Updating an existing Git repository==
@@ -83,18 +90,7 @@ localhost:~ user$ sudo port install git-core +svn
 
 ==From the Git source code==
 
-To install Git from the source code archive:
-  * download the latest Git source code archive from http://git.or.cz
-  * if you are compiling on Mac OS X 10.4, then you also need to download the [http://sourceforge.net/projects/expat/ Expat library] _(skip this step if you are running Mac OS X 10.5)_
-  * make and install Expat _(skip this step if you are running Mac OS X 10.5)_
-  * make and install Git (gotcha: it is not possible to build the documentation without installing additional libraries first; check the INSTALL file that comes with the Git source code)
-  * (if Git fails to build complaining about something to do with gettext then you should download and install [http://www.gnu.org/software/gettext/ gettext] and then try building Git again)
-More detailed instructions can be found [http://funkaoshi.com/blog/building-git-on-mac-os-x here].
-
-As an optional extra you might want to configure the `git-svn` command (this is not necessary if you only want to compile !MacVim). To do this, follow these _optional steps_:
-  * download and install [http://downloads.open.collab.net/binaries.html Subversion]
-  * add the line `export PERL5LIB="/opt/subversion/lib/svn-perl"` to `~/.profile` so that `git-svn` can find the Perl bindings to Subversion
-
+The source code for Git can be downloaded from http://git-scm.com.
 
 
 =Using the ASL logging system=
@@ -134,39 +130,6 @@ localhost:~ user$ ./MacVim.app/Contents/MacOS/MacVim -MMLogLevel 7 -MMLogToStdEr
 
 The levels passed to MMLogLevel are the same as are used by ASL, see `man syslog` for a complete list (5 is the default level).
 
-
-
-
-
-=Running several versions of !MacVim simultaneously=
-
-_As of snapshot 34 it is possible to run two or more instances of !MacVim simultaneously, but an error message will be logged for each instance that is started after the first one.  Running multiple instances is not recommended (but is of course unavoidable if you are working on !MacVim).  Modifying the CFBundleIdentifier as explained below is a way to get around the error message being logged, but is no longer necessary._
-
-*Optional:* If you have one version of !MacVim in e.g. `/Applications` and then build another with Xcode and try to run it, there will be trouble (since both are listening to the same named port for new Vim connections).  To get around this do the following (assuming you have installed !MacVim in the Applications folder):
-  * Open a Finder window on `/Applications`
-  * Rename `MacVim` to `MacVim-devel`
-  * Ctrl-click on the `MacVim-devel` icon and choose 'Show Package Contents'
-  * In the window that opens, double-click on `Contents` and then on `Info.plist`; this will bring up the 'Property List Editor'
-  * Expand `Root`, change `CFBundleIdentifier` to `org.vim.MacVim-devel`; save and quit the 'Property List Editor'
-
-You can now run !MacVim-devel whilst building and running !MacVim in Xcode.
-
-Alternatively, if you can leave the version in `/Applications` alone (say, if this is the snapshot build) and modify the CFBundleIdentifier of the version you are building instead.  To do this, open the file `Info.plist` inside the `src/MacVim` folder and change the value of CFBundleIdentifier (e.g. add `-devel` to the end).  Each time !MacVim is built it will copy `Info.plist` to the app bundle so that your custom built !MacVim will have a different CFBundleIdentifier from the version inside `/Applications`.
-
-
-=Building a universal binary=
-
-By default only a native binary will be built.  To build a universal binary you must first pass `--with-mac-arch=both` to `configure` and then use the 'Universal' build configuration when building !MacVim.app in Xcode.
-
-Using only Terminal, do the following (assuming you've checked out the source code into the folder `~/vim7`):
-{{{
-localhost:~/vim7/src user$ ./configure --enable-gui=macvim --with-mac-arch=both
-localhost:~/vim7/src user$ make clean && make
-localhost:~/vim7/src user$ cd MacVim
-localhost:~/vim7/src/MacVim user$ xcodebuild -configuration Universal clean
-localhost:~/vim7/src/MacVim user$ xcodebuild -configuration Universal
-}}}
-The app bundle can be found in the folder `~/vim7/src/MacVim/build/Universal`.
 
 
 
