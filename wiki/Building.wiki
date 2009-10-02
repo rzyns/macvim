@@ -51,7 +51,7 @@ These are the parameters to `configure` you are most likely to want to enable:
 
 As an example, say you are on OS X 10.6 and want to build a 32 bit binary (64 bit is the default on 10.6) with the "usual" features, and Python support.  Then call `configure` like this:
 {{{
-localhost:~ user$ ./configure --with-macarchs=i386 --with-features=huge --enable-pythoninterp
+localhost:~/vim7/src user$ ./configure --with-macarchs=i386 --with-features=huge --enable-pythoninterp
 }}}
 
 To see the list of all parameters, type `./configure --help` (note that not all parameters in that list apply to Mac OS X).
