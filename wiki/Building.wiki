@@ -46,7 +46,7 @@ These are the parameters to `configure` you are most likely to want to enable:
   * Python interpreter: `--enable-pythoninterp`
   * Ruby interpreter: `--enable-rubyinterp`
   * Perl interpreter: `--enable-perlinterp`
-  * Universal binary: `--with-macarchs=ARCHS` (`ARCHS=x86_64,i386,ppc,..`, one or more items in quotation mark separated by spaces)
+  * Universal binary: `--with-macarchs=ARCHS` (`ARCHS=x86_64,i386,ppc,..`, one or more items in quotation marks separated by spaces)
   * Mac OS X SDK version: `--with-macsdk=VER` (`VER=10.4,10.5,10.6,..`)
 
 As an example, say you are on OS X 10.6 and want to build a 32 bit binary (64 bit is the default on 10.6) with the "usual" features, and Python support.  Then call `configure` like this:
