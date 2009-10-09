@@ -3,7 +3,7 @@
 
 = Important =
 
-Snapshot builds of !MacVim are based on recent (hence untested) versions of the source code and are released fairly often.  Use these if you want access to the latest features and bug fixes but be aware that they may not behave as expected (which translates to _don't blame me if your computer explodes_).  That being said, if a snapshot has been released for a week or more that usually means that it is fairly stable (not to mention that I do all development using the latest snapshot).
+Snapshot builds of !MacVim are based on recent (hence untested) versions of the source code and are released fairly often.  Use these if you want access to the latest features and bug fixes.  As a rule of thumb the snapshot can be considered stable if it has been released more than a week in the past.
 
 = Download =
 
