@@ -14,6 +14,12 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 _Older change logs can be viewed by inspecting the various tags at the [http://repo.or.cz/w/MacVim.git source code repository]._
 
 
+
+== Snapshot 52 ==
+
+Read the [http://groups.google.com/group/vim_mac/browse_thread/thread/12f46704b5dfcd53 announcement].
+
+
 == Snapshot 51 ==
 
 Read the [http://groups.google.com/group/vim_mac/browse_thread/thread/b93c6dd5183bdc5e announcement].
