@@ -8,8 +8,8 @@
 First of all, follow the [Building build instructions] on how to get and build the source code.  For simplicity I will assume you have a newly cloned version of the !MacVim repository.  Also, when you eventually submit a patch it helps if you have told Git your name and email address because this shows up in the commit history (so that other people may know that you wrote the patch and how to contact you).  To do this, enter something like
 
 {{{
-git-config --global user.name "Joe Bloggs"
-git-config --global user.email "joe.bloggs@gmail.com"
+git config --global user.name "Joe Bloggs"
+git config --global user.email "joe.bloggs@gmail.com"
 }}}
 
 (You should obviously put your own name and email address in there.)  This step only needs to be carried out once; the `--global` switch ensures that all Git repositories you have from now on will know your name and email.
@@ -20,7 +20,7 @@ git-config --global user.email "joe.bloggs@gmail.com"
 Lets say you want to add a new feature to !MacVim.  The first thing to do is to create a new branch to work on and leave the "master" branch in a pristine condition.  Lets call the new branch "feature":
 
 {{{
-git-checkout -b feature
+git checkout -b feature
 }}}
 
 This creates a branch called "feature" and checks it out so that you can start working on it.
@@ -35,7 +35,7 @@ As you work away on your new feature the daily work flow goes something like:
 Steps 1-2 are up to you to figure out, step 3 can be done in one of two ways.  The simplest way works if you have only modified existing files:
 
 {{{
-git-commit -a
+git commit -a
 }}}
 
 This will make a commit including all modified files (but not newly created files!) and bring up an editor window so you can enter a commit message.  Here is an example of what the commit message could look like:
@@ -51,9 +51,9 @@ This will make a commit including all modified files (but not newly created file
 
 If you made a mistake while typing the commit message you can easily change it by entering
 {{{
-git-commit --amend
+git commit --amend
 }}}
-which will bring up your old commit message so that you may modify it.  (This method not only lets you modify a bad commit message; you can also make modifications to the source code, then type `git-commit -a --amend` to rewrite your last commit to include your modifications.)
+which will bring up your old commit message so that you may modify it.  (This method not only lets you modify a bad commit message; you can also make modifications to the source code, then type `git commit -a --amend` to rewrite your last commit to include your modifications.)
 
 
 ==Updating to the latest version==
@@ -61,18 +61,18 @@ which will bring up your old commit message so that you may modify it.  (This me
 While you are working on your feature it is not entirely unlikely that commits are made to the public Git repo.  In this situation you will probably want to update your "master" branch to be up-to-date with the public repo.  Before doing this you should make sure you have no uncommited changes (commit first if you do), then you switch to the "master" branch and pull the latest version with two commands:
 
 {{{
-git-checkout master
-git-pull
+git checkout master
+git pull
 }}}
 
 That will update the "master" branch to the latest version of the source code.  In order to get these changes merged into your "feature" branch as well you should rebase your commits on top of the changes made to the "master" branch:
 
 {{{
-git-checkout feature
-git-rebase master
+git checkout feature
+git rebase master
 }}}
 
-Those two commands will switch back to your "feature" branch and then apply the commits you just pulled _in front of_ your own commits that you have made in the "feature" branch.  (Don't worry if this makes no sense to you; check the Git documentation if you are curious as to what git-rebase does.)
+Those two commands will switch back to your "feature" branch and then apply the commits you just pulled _in front of_ your own commits that you have made in the "feature" branch.  (Don't worry if this makes no sense to you; check the Git documentation if you are curious as to what `git rebase` does.)
 
 
 ==Submitting a patch==
@@ -80,7 +80,7 @@ Those two commands will switch back to your "feature" branch and then apply the 
 When you have finished implementing your new feature you are ready to create a patch series to be submitted.  But before doing so, make sure you have updated your repository to the latest version as described in the previous section.  Once you have updated the "master" branch, you create a patch series with the following command:
 
 {{{
-git-format-patch master
+git format-patch master
 }}}
 
 This will make a diff between your branch and the "master" branch, and output a series of `.patch` files in the current directory.  One patch file is created for each commit that you have made in your branch.
@@ -101,45 +101,45 @@ The first stop for general Git information is the [http://git.or.cz/ Git Home Pa
 Typically, when I start working I like to see what I am up to:
 
 {{{
-git-log
+git log
 }}}
 
 Then, I start working and when I'm ready to commit I often review everything I've done so that I may write a decent commit message (and so that I haven't left any NSLog() debugging calls in the source).  First, I check which files I've edited:
 
 {{{
-git-status
+git status
 }}}
 
 Alternatively, I sometimes like to see the extent of my changes, in which case I use:
 
 {{{
-git-diff --status
+git diff --status
 }}}
 
 Then, to get a diff of my changes I enter:
 
 {{{
-git-diff
+git diff
 }}}
 
 It often happens that I am simply testing some things out that I don't end up wanting to keep.  To quickly reset all the changes made since the last commit I use:
 
 {{{
-git-reset --hard
+git reset --hard
 }}}
 
-That would undo the changes in all files that are marked as "Changed" in the output of git-status.  Sometimes all I want to do is to reset all changes in one file, in which case I type:
+That would undo the changes in all files that are marked as "Changed" in the output of `git status`.  Sometimes all I want to do is to reset all changes in one file, in which case I type:
 
 {{{
-git-checkout filename
+git checkout filename
 }}}
 
 That would undo the changes in the file called "filename" only.
 
-Sometimes I forget which branch I am on (git-status will also tell you that) or how many branches I have at the moment.  To see a list of my branches:
+Sometimes I forget which branch I am on (`git status` will also tell you that) or how many branches I have at the moment.  To see a list of my branches:
 
 {{{
-git-branch
+git branch
 }}}
 
 
