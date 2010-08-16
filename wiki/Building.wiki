@@ -1,5 +1,5 @@
 #summary How to build MacVim
-#labels Featured,Phase-Implementation
+#labels Phase-Implementation
 
 =Building !MacVim from the Git repository=
 
