@@ -1,5 +1,4 @@
 #summary Frequently Asked Questions
-#labels Featured
 
 *IMPORTANT:* Always consult `:h macvim` (and `:help`) first!
 
