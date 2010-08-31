@@ -6,7 +6,7 @@ Snapshot builds of !MacVim are based on recent (hence untested) versions of the 
 
 = Download =
 
-[http://macvim.googlecode.com/files/MacVim-snapshot-52.tbz Download snapshot 52] (released Friday the 5th of March 2010).  This is a universal 32/64 bit binary which *requires an Intel processor and Mac OS X 10.5 or later*.  If the download fails, please try using the [http://newmacvim.muskokamug.org/ Downloads mirror].
+[http://macvim.googlecode.com/files/MacVim-snapshot-52.tbz Download snapshot 52] (released Friday the 5th of March 2010).  This is a universal 32/64 bit binary which *requires an Intel processor and Mac OS X 10.5 or later*.
 
 = Change log =
 
