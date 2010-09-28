@@ -44,6 +44,11 @@ If it is not a problem with the GUI itself, then you can see if the problem also
 Download the latest snapshot build of !MacVim and see if the problem is still there.  
 
 
+=== Ensure that other rc-files are not the cause ===
+
+Quit !MacVim, temporarily rename all rc-files for whatever shell you are using (`.profile`, `.bashrc`, etc.), then restart !MacVim and see if the problem persists.  Exactly which files to rename depends on which shell you are using.  (To be on the safe side you may want to move all files from your home folder into a temporary folder.)
+
+
 === Reset the preferences ===
 
 Reset the preferences and restart !MacVim.
