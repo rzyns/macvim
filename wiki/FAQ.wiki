@@ -1,4 +1,5 @@
 #summary Frequently Asked Questions
+#labels Deprecated
 
 *IMPORTANT:* Always consult `:h macvim` (and `:help`) first!
 
