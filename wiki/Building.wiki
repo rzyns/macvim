@@ -1,5 +1,5 @@
 #summary How to build MacVim
-#labels Phase-Implementation
+#labels Phase-Implementation,Deprecated
 
 =Move to !GitHub=
 
