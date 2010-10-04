@@ -1,3 +1,1 @@
-#summary Wiki has moved to GitHub
-
 [http://github.com/b4winckler/macvim/wiki The MacVim Wiki has moved]!
