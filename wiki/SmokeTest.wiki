@@ -1,5 +1,5 @@
 #summary Smoke test for new snapshots
-#labels Phase-QA
+#labels Phase-QA,Deprecated
 
 In order for us to catch simple bugs when new snapshots are released Nico Weber has proposed a sort of "smoke test".  It would be good if everybody testing a new snapshot would go through these simple steps and let me know if something fails.  Please leave a comment if you have any other tests that should be added to this list.
 
