@@ -1,0 +1,1 @@
+[The Downloads have moved](http://github.com/b4winckler/macvim/downloads)!

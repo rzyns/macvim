@@ -1,0 +1,1 @@
+[The MacVim Wiki has moved](http://github.com/b4winckler/macvim/wiki)!
